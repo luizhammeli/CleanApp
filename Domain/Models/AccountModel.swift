@@ -8,8 +8,15 @@
 import Foundation
 
 public struct AccountModel: Model {
-    let id: String
-    let name: String
-    let email: String
-    let passsword: String    
+    public let id: String
+    public let name: String
+    public let email: String
+    public let passsword: String
+    
+    public init(id: String, name: String, email: String, passsword: String) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.passsword = passsword
+    }
 }
