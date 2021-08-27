@@ -43,21 +43,14 @@ class RemoteAddAcountTests: XCTestCase {
         }
     }
     
-    func expect(sut: RemoteAddAccount, with expectedResult: Result<AccountModel, DomainError>, when action: @escaping (() -> Void), file: StaticString = #filePath, line: UInt = #line) {
-        let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
-            switch (expectedResult, receivedResult) {
-            case (.failure(let expectedError), .failure(let receivedError)):
-                XCTAssertEqual(expectedError, receivedError)
-            case (.success(let expectedAccount), .success(let receivedAccount)):
-                XCTAssertEqual(expectedAccount, receivedAccount)
-            default:
-                XCTFail()
-            }
-            exp.fulfill()
-        }
-        action()
-        wait(for: [exp], timeout: 1)
+    func test_add_should_not_complete_if_client_has_been_deallocated() throws {
+        let postClient = HttpClientSpy()
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeFakeURL(), postClient: postClient)
+        var result: Result<AccountModel, DomainError>?
+        sut?.add(addAccountModel: makeAddAccountModel(), completion: { result = $0 })
+        sut = nil
+        postClient.completeWithSuccess(data: makeInvalidData())
+        XCTAssertNil(result)
     }
 }
 
@@ -65,7 +58,14 @@ extension RemoteAddAcountTests {
     func makeSut(url: URL = URL(string: "https://www.any-url.com")!) -> (RemoteAddAccount, HttpClientSpy) {
         let postClient = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, postClient: postClient)
+        checkMemoryLeak(object: sut)
         return (sut, postClient)
+    }
+    
+    func checkMemoryLeak(object: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
+        addTeardownBlock { [weak object] in
+            XCTAssertNil(object, file: file, line: line)
+        }
     }
     
     func makeAddAccountModel() -> AddAccountModel {
@@ -82,6 +82,23 @@ extension RemoteAddAcountTests {
     
     func makeFakeURL() -> URL {
         URL(string: "https://www.any-url.com")!
+    }
+    
+    func expect(sut: RemoteAddAccount, with expectedResult: Result<AccountModel, DomainError>, when action: @escaping (() -> Void), file: StaticString = #filePath, line: UInt = #line) {
+        let exp = expectation(description: "waiting")
+        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)):
+                XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedAccount), .success(let receivedAccount)):
+                XCTAssertEqual(expectedAccount, receivedAccount, file: file, line: line)
+            default:
+                XCTFail()
+            }
+            exp.fulfill()
+        }
+        action()
+        wait(for: [exp], timeout: 1)
     }
 }
 
