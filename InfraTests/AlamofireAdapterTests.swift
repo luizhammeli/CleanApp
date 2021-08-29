@@ -8,6 +8,12 @@
 import XCTest
 @testable import Infra
 
+class AlamofireAdapter {
+    func post(to url: URL) {
+        
+    }
+}
+
 class AlamofireAdapterTests: XCTestCase {
     func test_() {
         
