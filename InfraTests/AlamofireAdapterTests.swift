@@ -8,7 +8,7 @@
 import XCTest
 @testable import Infra
 
-class InfraTests: XCTestCase {
+class AlamofireAdapterTests: XCTestCase {
     func test_() {
         
     }

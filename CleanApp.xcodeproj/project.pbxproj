@@ -14,7 +14,7 @@
 		2551F94926D87C7100F72A14 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94826D87C7100F72A14 /* HttpClientSpy.swift */; };
 		2551F94D26D87CD700F72A14 /* AccountModelFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94C26D87CD700F72A14 /* AccountModelFactories.swift */; };
 		257E08BC26DC34E70030B859 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E08B326DC34E70030B859 /* Infra.framework */; };
-		257E08C126DC34E70030B859 /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E08C026DC34E70030B859 /* InfraTests.swift */; };
+		257E08C126DC34E70030B859 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */; };
 		257E08CA26DC34FE0030B859 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1421A26CB45C3004B7738 /* Data.framework */; };
 		257E08CB26DC34FE0030B859 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1421A26CB45C3004B7738 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		257E08CF26DC35180030B859 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94526D87C0800F72A14 /* TestFactories.swift */; };
@@ -97,7 +97,7 @@
 		257E08B326DC34E70030B859 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257E08B626DC34E70030B859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257E08BB26DC34E70030B859 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		257E08C026DC34E70030B859 /* InfraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTests.swift; sourceTree = "<group>"; };
+		257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		257E08C226DC34E70030B859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F1420D26CB45B6004B7738 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F1421026CB45B6004B7738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		257E08BF26DC34E70030B859 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				257E08C026DC34E70030B859 /* InfraTests.swift */,
+				257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */,
 				257E08C226DC34E70030B859 /* Info.plist */,
 			);
 			path = InfraTests;
@@ -528,7 +528,7 @@
 			files = (
 				257E08CF26DC35180030B859 /* TestFactories.swift in Sources */,
 				257E08D026DC351F0030B859 /* TestExtensions.swift in Sources */,
-				257E08C126DC34E70030B859 /* InfraTests.swift in Sources */,
+				257E08C126DC34E70030B859 /* AlamofireAdapterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
