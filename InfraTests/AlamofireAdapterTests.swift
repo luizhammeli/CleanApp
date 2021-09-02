@@ -16,27 +16,50 @@ class AlamofireAdapter {
         self.session = session
     }
     
-    func post(to url: URL) {
-        session.request(url, method: .post).resume()
+    func post(to url: URL, with data: Data?) {
+        var json: [String: Any]?
+        if let data = data {
+            json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+        }
+        session.request(url, method: .post, parameters: json).resume()
     }
 }
 
 class AlamofireAdapterTests: XCTestCase {
-    func test_() {
+    func test_should_make_request_with_valid_data_url_and_method() {
+        let url = makeFakeURL()
+        testRequest(url: url, data: makeValidData()) { request in
+            XCTAssertEqual(request.url, url)
+            XCTAssertEqual(request.method, .post)
+            XCTAssertNotNil(request.httpBodyStream)
+        }
+    }
+    
+    func test_should_make_request_with_no_data() {
+        testRequest(url: makeFakeURL()) { request in
+            XCTAssertNil(request.httpBodyStream)
+        }
+    }
+}
+
+extension AlamofireAdapterTests {
+    func makeSut(file: StaticString = #filePath, line: UInt = #line) -> AlamofireAdapter {
         let config = URLSessionConfiguration.default
         config.protocolClasses = [URLProtocolStub.self]
         let session = Alamofire.Session(configuration: config)
-        let adapter = AlamofireAdapter(session: session)
-        let url = makeFakeURL()
-        
+        let sut = AlamofireAdapter(session: session)
+        checkMemoryLeak(for: sut, file: file, line: line)
+        return sut
+    }
+    
+    func testRequest(url: URL = makeFakeURL(), data: Data? = nil, completion: @escaping (URLRequest) -> Void) {
+        let sut = makeSut()
         let expectation = expectation(description: "waiting")
         URLProtocolStub.observeRequest { request in
-            XCTAssertEqual(request.url, url)
-            XCTAssertEqual(request.method, .post)
+            completion(request)
             expectation.fulfill()
         }
-        
-        adapter.post(to: url)
+        sut.post(to: url, with: data)
         wait(for: [expectation], timeout: 1)
     }
 }

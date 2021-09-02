@@ -8,9 +8,13 @@
 import Foundation
 
 func makeInvalidData() -> Data {
-    Data("Test Element".utf8)
+    return Data("Test Element".utf8)
+}
+
+func makeValidData() -> Data {
+    return Data("{\"name\": \"Rodrigo\"}".utf8)
 }
 
 func makeFakeURL() -> URL {
-    URL(string: "https://www.any-url.com")!
+    return URL(string: "https://www.any-url.com")!
 }
