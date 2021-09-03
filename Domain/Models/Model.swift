@@ -14,9 +14,3 @@ public extension Model {
         try? JSONEncoder().encode(self)
     }
 }
-
-public extension Data {
-    func toObject<T: Decodable>() -> T? {
-        return try? JSONDecoder().decode(T.self, from: self)
-    }
-}

@@ -1,7 +1,5 @@
 ## User settings
-CleanApp.xcodeproj/xcuserdata/
-CleanApp.xcodeproj/xcuserdata/luizdinizhammerli.xcuserdatad/xcschemes/xcschememanagement.plist
-CleanApp.xcodeproj/project.xcworkspace/xcuserdata/luizdinizhammerli.xcuserdatad/UserInterfaceState.xcuserstate
-CleanApp.xcodeproj/project.xcworkspace/xcuserdata/luizdinizhammerli.xcuserdatad/UserInterfaceState.xcuserstate
-CleanApp.xcodeproj/project.xcworkspace/xcuserdata/luizdinizhammerli.xcuserdatad/UserInterfaceState.xcuserstate
-CleanApp.xcodeproj/xcuserdata/luizdinizhammerli.xcuserdatad/xcschemes/xcschememanagement.plist
+CleanApp.xcodeproj/xcuserdata/*
+CleanApp.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcuserstate
+*.xcuserdatad

@@ -7,21 +7,22 @@
 
 import XCTest
 import Alamofire
+import Data
 //@testable import Infra
 
-class AlamofireAdapter {
+class AlamofireAdapter: HttpPostClient {
     private let session: Alamofire.Session
     
     init(session: Alamofire.Session = .default) {
         self.session = session
     }
     
-    func post(to url: URL, with data: Data?) {
+    func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
         var json: [String: Any]?
-        if let data = data {
-            json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
-        }
-        session.request(url, method: .post, parameters: json).resume()
+        json = data?.toDictionary()
+        session.request(url, method: .post, parameters: json).response(completionHandler: { _ in
+            completion(.failure(.noConnectivity))
+        }).resume()
     }
 }
 
@@ -55,11 +56,14 @@ extension AlamofireAdapterTests {
     func testRequest(url: URL = makeFakeURL(), data: Data? = nil, completion: @escaping (URLRequest) -> Void) {
         let sut = makeSut()
         let expectation = expectation(description: "waiting")
-        URLProtocolStub.observeRequest { request in
+        var request: URLRequest!
+
+        sut.post(to: url, with: data) { _ in
             completion(request)
             expectation.fulfill()
         }
-        sut.post(to: url, with: data)
+        
+        URLProtocolStub.observeRequest { request = $0 }
         wait(for: [expectation], timeout: 1)
     }
 }
@@ -80,6 +84,7 @@ class URLProtocolStub: URLProtocol {
     
     override open func startLoading() {
         URLProtocolStub.emiter?(request)
+        client?.urlProtocolDidFinishLoading(self)
     }
 
     override open func stopLoading() {}
