@@ -8,44 +8,7 @@
 import XCTest
 import Alamofire
 import Data
-//@testable import Infra
-
-class AlamofireAdapter: HttpPostClient {
-    private let session: Alamofire.Session
-    
-    init(session: Alamofire.Session = .default) {
-        self.session = session
-    }
-    
-    func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
-        var json: [String: Any]?
-        json = data?.toDictionary()
-        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).responseData { responseData in
-            guard let statusCode = responseData.response?.statusCode else { completion(.failure(.noConnectivity)); return }
-            switch responseData.result {
-            case .success(let data):
-                switch statusCode {
-                case 204:
-                    completion(.success(nil))
-                case 200...299:
-                    completion(.success(data))
-                case 401:
-                    completion(.failure(.unauthorized))
-                case 403:
-                    completion(.failure(.forbidden))
-                case 400...499:
-                    completion(.failure(.badRequest))
-                case 500...599:
-                    completion(.failure(.serverError))
-                default:
-                    completion(.failure(.noConnectivity))
-                }
-            case .failure(_):
-                completion(.failure(.noConnectivity))
-            }
-        }
-    }
-}
+import Infra
 
 class AlamofireAdapterTests: XCTestCase {
     func test_should_make_request_with_valid_data_url_and_method() {
@@ -141,49 +104,4 @@ extension AlamofireAdapterTests {
         }
         wait(for: [expectation], timeout: 1)
     }
-}
-
-class URLProtocolStub: URLProtocol {
-    static private var emiter: ((URLRequest) -> Void)?
-    static private var error: Error?
-    static private var data: Data?
-    static private var response: URLResponse?
-    
-    static func observeRequest(completion: @escaping (URLRequest) -> Void) {
-        URLProtocolStub.emiter = completion
-    }
-    
-    static func simulate(data: Data?, response: URLResponse?, error: Error?) {
-        URLProtocolStub.data = data
-        URLProtocolStub.response = response
-        URLProtocolStub.error = error
-    }
-    
-    override open class func canInit(with request: URLRequest) -> Bool {
-        return true
-    }
-    
-    override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
-        return request
-    }
-    
-    override open func startLoading() {
-        URLProtocolStub.emiter?(request)
-        
-        if let data = URLProtocolStub.data {
-            client?.urlProtocol(self, didLoad: data)
-        }
-        
-        if let response = URLProtocolStub.response {
-            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
-        }
-        
-        if let error = URLProtocolStub.error {
-            client?.urlProtocol(self, didFailWithError: error)
-        }
-        
-        client?.urlProtocolDidFinishLoading(self)
-    }
-
-    override open func stopLoading() {}
 }
