@@ -23,7 +23,7 @@ public class RemoteAddAccount: AddAccount {
             case .failure:
                 completion(.failure(.unexpected))
             case .success(let data):
-                guard let accountModel: AccountModel = data.toObject() else {
+                guard let accountModel: AccountModel = data?.toObject() else {
                     completion(.failure(.invalidData))
                     return
                 }         
