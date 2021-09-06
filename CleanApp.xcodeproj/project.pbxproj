@@ -22,6 +22,11 @@
 		257E08D326DC37EB0030B859 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 257E08D226DC37EB0030B859 /* Alamofire */; };
 		259010EF26E643D300A4124C /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259010E626E643D300A4124C /* Presentation.framework */; };
 		259010F426E643D300A4124C /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259010F326E643D300A4124C /* PresentationTests.swift */; };
+		2590110326E6696800A4124C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
+		2590110426E6696800A4124C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2590110926E6785200A4124C /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110826E6785200A4124C /* SignupPresenter.swift */; };
+		2590110D26E698D800A4124C /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110C26E698D800A4124C /* AlertViewModel.swift */; };
+		2590111026E6A31E00A4124C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110F26E6A31E00A4124C /* EmailValidator.swift */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25F0C58526E2713C00577B0C /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0C58426E2713C00577B0C /* ExtensionData.swift */; };
@@ -61,26 +66,12 @@
 			remoteGlobalIDString = 259010E526E643D300A4124C;
 			remoteInfo = Presentation;
 		};
-		259010FD26E643EB00A4124C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25F141F426CB45A0004B7738 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25F1421926CB45C3004B7738;
-			remoteInfo = Data;
-		};
-		259010FF26E643EB00A4124C /* PBXContainerItemProxy */ = {
+		2590110526E6696800A4124C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25F141F426CB45A0004B7738 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 25F1420C26CB45B6004B7738;
 			remoteInfo = Domain;
-		};
-		2590110126E643EB00A4124C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25F141F426CB45A0004B7738 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 257E08B226DC34E70030B859;
-			remoteInfo = Infra;
 		};
 		25BFAE0C26D881CD001EB57E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -131,6 +122,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2590110726E6696900A4124C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2590110426E6696800A4124C /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25BFAE0E26D881CD001EB57E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +163,9 @@
 		259010EE26E643D300A4124C /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		259010F326E643D300A4124C /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
 		259010F526E643D300A4124C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2590110826E6785200A4124C /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		2590110C26E698D800A4124C /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		2590110F26E6A31E00A4124C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		25F0C58426E2713C00577B0C /* ExtensionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
 		25F0C58726E5495600577B0C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		25F0C58A26E54A1E00577B0C /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2590110326E6696800A4124C /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +302,9 @@
 		259010E726E643D300A4124C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2590110E26E6A2BF00A4124C /* Validators */,
+				2590110B26E698C100A4124C /* Views */,
+				2590110A26E698B800A4124C /* Presenters */,
 				259010E926E643D300A4124C /* Info.plist */,
 			);
 			path = Presentation;
@@ -308,6 +317,30 @@
 				259010F526E643D300A4124C /* Info.plist */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		2590110A26E698B800A4124C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				2590110826E6785200A4124C /* SignupPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2590110B26E698C100A4124C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2590110C26E698D800A4124C /* AlertViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2590110E26E6A2BF00A4124C /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				2590110F26E6A31E00A4124C /* EmailValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		25F0C58326E2712600577B0C /* Helpers */ = {
@@ -541,13 +574,12 @@
 				259010E226E643D300A4124C /* Sources */,
 				259010E326E643D300A4124C /* Frameworks */,
 				259010E426E643D300A4124C /* Resources */,
+				2590110726E6696900A4124C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				259010FE26E643EB00A4124C /* PBXTargetDependency */,
-				2590110026E643EB00A4124C /* PBXTargetDependency */,
-				2590110226E643EB00A4124C /* PBXTargetDependency */,
+				2590110626E6696800A4124C /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -666,6 +698,7 @@
 					};
 					259010E526E643D300A4124C = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					259010ED26E643D300A4124C = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -795,6 +828,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2590110926E6785200A4124C /* SignupPresenter.swift in Sources */,
+				2590110D26E698D800A4124C /* AlertViewModel.swift in Sources */,
+				2590111026E6A31E00A4124C /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,20 +903,10 @@
 			target = 259010E526E643D300A4124C /* Presentation */;
 			targetProxy = 259010F026E643D300A4124C /* PBXContainerItemProxy */;
 		};
-		259010FE26E643EB00A4124C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25F1421926CB45C3004B7738 /* Data */;
-			targetProxy = 259010FD26E643EB00A4124C /* PBXContainerItemProxy */;
-		};
-		2590110026E643EB00A4124C /* PBXTargetDependency */ = {
+		2590110626E6696800A4124C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 25F1420C26CB45B6004B7738 /* Domain */;
-			targetProxy = 259010FF26E643EB00A4124C /* PBXContainerItemProxy */;
-		};
-		2590110226E643EB00A4124C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 257E08B226DC34E70030B859 /* Infra */;
-			targetProxy = 2590110126E643EB00A4124C /* PBXContainerItemProxy */;
+			targetProxy = 2590110526E6696800A4124C /* PBXContainerItemProxy */;
 		};
 		25BFAE0D26D881CD001EB57E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1002,6 +1028,7 @@
 		259010F726E643D400A4124C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1019,6 +1046,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1026,6 +1054,7 @@
 		259010F826E643D400A4124C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1050,6 +1079,7 @@
 		259010F926E643D400A4124C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M2DD4Z95YZ;
@@ -1068,6 +1098,7 @@
 		259010FA26E643D400A4124C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M2DD4Z95YZ;
