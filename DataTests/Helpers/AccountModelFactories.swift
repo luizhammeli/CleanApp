@@ -8,5 +8,5 @@ import Foundation
 import Domain
 
 func makeAccountModel() -> AccountModel {
-    AccountModel(id: "123", name: "Test User", email: "teste@mail.com", passsword: "passwordTest")
+    AccountModel(accessToken: "123", name: "Test User")
 }
