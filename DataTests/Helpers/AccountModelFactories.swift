@@ -10,3 +10,7 @@ import Domain
 func makeAccountModel() -> AccountModel {
     AccountModel(accessToken: "123", name: "Test User")
 }
+
+func makeAddAccountModel() -> AddAccountModel {
+    return AddAccountModel(name: "Test User", email: "teste@mail.com", password: "passwordTest", passwordConfirmation: "passwordTest")
+}

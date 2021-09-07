@@ -132,6 +132,26 @@
                ReferencedContainer = "container:CleanApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "259010ED26E643D300A4124C"
+               BuildableName = "PresentationTests.xctest"
+               BlueprintName = "PresentationTests"
+               ReferencedContainer = "container:CleanApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "25F0C58F26E5519B00577B0C"
+               BuildableName = "UseCasesIntegrationTests.xctest"
+               BlueprintName = "UseCasesIntegrationTests"
+               ReferencedContainer = "container:CleanApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
