@@ -27,6 +27,7 @@
 		2590110926E6785200A4124C /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110826E6785200A4124C /* SignupPresenter.swift */; };
 		2590110D26E698D800A4124C /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110C26E698D800A4124C /* AlertViewModel.swift */; };
 		2590111026E6A31E00A4124C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110F26E6A31E00A4124C /* EmailValidator.swift */; };
+		2590111126E76E9B00A4124C /* AccountModelFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94C26D87CD700F72A14 /* AccountModelFactories.swift */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25F0C58526E2713C00577B0C /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0C58426E2713C00577B0C /* ExtensionData.swift */; };
@@ -838,6 +839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2590111126E76E9B00A4124C /* AccountModelFactories.swift in Sources */,
 				259010F426E643D300A4124C /* PresentationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

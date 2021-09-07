@@ -6,20 +6,33 @@
 //
 
 import Foundation
+import Domain
 
 public final class SignupPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
+    private let addAccount: AddAccount
     
-    public init(alertView: AlertView, emailValidator: EmailValidator) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
         self.alertView = alertView
         self.emailValidator = emailValidator
+        self.addAccount = addAccount
     }
     
     public func signup(viewModel: SignupViewModel) {
         if let error = validate(viewModel: viewModel) {
             let alertViewModel = AlertViewModel(title: "Falha na validação", message: error)
-            return alertView.showMessage(viewModel: alertViewModel)
+            alertView.showMessage(viewModel: alertViewModel)
+        } else {
+            guard let addAccountModel = makeAddAccountModel(with: viewModel) else { return }
+            addAccount.add(addAccountModel: addAccountModel, completion: { result in
+                switch result {
+                case .failure:
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
+                case .success:
+                    break
+                }
+            })
         }
     }
     
@@ -42,6 +55,15 @@ public final class SignupPresenter {
         guard emailValidator.isValid(email: email) else { return  "O Email inserido é inválido" }
         
         return nil
+    }
+    
+    private func makeAddAccountModel(with signupViewModel: SignupViewModel) -> AddAccountModel? {
+        guard let name = signupViewModel.name,
+              let email = signupViewModel.email,
+              let password = signupViewModel.password,
+              let passwordConfirmation = signupViewModel.passwordConfirmation else { return nil }
+        
+        return AddAccountModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     }
 }
 
