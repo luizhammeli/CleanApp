@@ -13,6 +13,7 @@
 		2551F94626D87C0800F72A14 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94526D87C0800F72A14 /* TestFactories.swift */; };
 		2551F94926D87C7100F72A14 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94826D87C7100F72A14 /* HttpClientSpy.swift */; };
 		2551F94D26D87CD700F72A14 /* AccountModelFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94C26D87CD700F72A14 /* AccountModelFactories.swift */; };
+		257AFF7D26E806E00028DFDB /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
 		257E08BC26DC34E70030B859 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E08B326DC34E70030B859 /* Infra.framework */; };
 		257E08C126DC34E70030B859 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */; };
 		257E08CA26DC34FE0030B859 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1421A26CB45C3004B7738 /* Data.framework */; };
@@ -840,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2590111126E76E9B00A4124C /* AccountModelFactories.swift in Sources */,
+				257AFF7D26E806E00028DFDB /* TestExtensions.swift in Sources */,
 				259010F426E643D300A4124C /* PresentationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

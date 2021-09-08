@@ -25,7 +25,8 @@ public final class SignupPresenter {
             alertView.showMessage(viewModel: alertViewModel)
         } else {
             guard let addAccountModel = makeAddAccountModel(with: viewModel) else { return }
-            addAccount.add(addAccountModel: addAccountModel, completion: { result in
+            addAccount.add(addAccountModel: addAccountModel, completion: { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case .failure:
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
