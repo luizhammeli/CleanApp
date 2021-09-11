@@ -129,15 +129,42 @@ final class PresentationTests: XCTestCase {
         addAccount.completeWithError(error: .unexpected)
         wait(for: [expectation], timeout: 1)
     }
+    
+    func test_should_() throws {
+        let loadingView = LoadingViewSpy()
+        let sut = makeSut(loadingView: loadingView)
+        let expectation = expectation(description: "waiting")
+        loadingView.observe { [weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeLoadingViewModel(isLoading: true))
+            expectation.fulfill()
+        }
+        sut.signup(viewModel: makeSignUpViewModel())
+        wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_should__2() throws {
+        let loadingView = LoadingViewSpy()
+        let addAccount = AddAcountSpy()
+        let sut = makeSut(loadingView: loadingView, addAccount: addAccount)
+        let expectation = expectation(description: "waiting")
+        loadingView.observe(when: false) { [weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeLoadingViewModel(isLoading: false))
+            expectation.fulfill()
+        }
+        sut.signup(viewModel: makeSignUpViewModel())
+        addAccount.completeWithError(error: .unexpected)
+        wait(for: [expectation], timeout: 1)
+    }
 }
 
 extension PresentationTests {
     private func makeSut(alertView: AlertViewSpy = AlertViewSpy(),
+                         loadingView: LoadingView = LoadingViewSpy(),
                          emailValidator: EmailValidatorSpy = EmailValidatorSpy(),
                          addAccount: AddAccount = AddAcountSpy(),
                          file: StaticString = #filePath,
                          line: UInt = #line) -> SignupPresenter {
-        let sut = SignupPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+        let sut = SignupPresenter(alertView: alertView, loadingView: loadingView, emailValidator: emailValidator, addAccount: addAccount)
         checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
@@ -157,6 +184,10 @@ extension PresentationTests {
     private func makeSignupAlertViewModel() -> AlertViewModel {
         return AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente.")
     }
+    
+    private func makeLoadingViewModel(isLoading: Bool) -> LoadingViewModel {
+        return .init(isLoading: isLoading)
+    }
 }
 
 final class AlertViewSpy: AlertView {
@@ -170,6 +201,24 @@ final class AlertViewSpy: AlertView {
     
     func observe(completion: @escaping (AlertViewModel?) -> Void) {
         self.emiter = completion
+    }
+}
+
+final class LoadingViewSpy: LoadingView {
+    private var viewModel: LoadingViewModel?
+    var emiter: ((LoadingViewModel?) -> Void)?
+    var executeEmiterWhenIsLoading: Bool = true
+    
+    func showLoader(viewModel: LoadingViewModel) {
+        self.viewModel = viewModel
+        if executeEmiterWhenIsLoading == viewModel.isLoading  {
+            emiter?(viewModel)
+        }
+    }
+    
+    func observe(when isLoading: Bool = true, completion: @escaping (LoadingViewModel?) -> Void) {
+        self.emiter = completion
+        self.executeEmiterWhenIsLoading = isLoading
     }
 }
 

@@ -12,11 +12,13 @@ public final class SignupPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
     private let addAccount: AddAccount
+    private let loadingView: LoadingView
     
-    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
+    public init(alertView: AlertView, loadingView: LoadingView, emailValidator: EmailValidator, addAccount: AddAccount) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
+        self.loadingView = loadingView
     }
     
     public func signup(viewModel: SignupViewModel) {
@@ -25,8 +27,10 @@ public final class SignupPresenter {
             alertView.showMessage(viewModel: alertViewModel)
         } else {
             guard let addAccountModel = makeAddAccountModel(with: viewModel) else { return }
+            loadingView.showLoader(viewModel: .init(isLoading: true))
             addAccount.add(addAccountModel: addAccountModel, completion: { [weak self] result in
                 guard let self = self else { return }
+                self.loadingView.showLoader(viewModel: .init(isLoading: false))
                 switch result {
                 case .failure:
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
