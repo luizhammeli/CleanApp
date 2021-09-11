@@ -16,5 +16,5 @@ public struct LoadingViewModel: Equatable {
 }
 
 public protocol LoadingView {
-    func showLoader(viewModel: LoadingViewModel)
+    func display(viewModel: LoadingViewModel)
 }
