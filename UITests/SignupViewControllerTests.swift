@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import UI
+//@testable import UI
 
 class SignupViewControllerTests: XCTestCase {
     func testExample() throws {
