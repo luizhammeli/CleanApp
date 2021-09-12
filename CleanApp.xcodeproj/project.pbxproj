@@ -406,6 +406,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2585C82626EEB04D0070B1ED /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2585C82126EEAFCB0070B1ED /* Signup */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		2586A8DC26ED35D80038D4A8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,7 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				2585C82226EEAFE20070B1ED /* Helpers */,
-				2585C82126EEAFCB0070B1ED /* Signup */,
+				2585C82626EEB04D0070B1ED /* Scene */,
 				2586A90426EE306F0038D4A8 /* Info.plist */,
 			);
 			path = UITests;
