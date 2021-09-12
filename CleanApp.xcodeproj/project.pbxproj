@@ -388,6 +388,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		2585C82126EEAFCB0070B1ED /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				2586A90226EE306F0038D4A8 /* SignupViewControllerTests.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		2586A8DC26ED35D80038D4A8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,7 +459,7 @@
 		2586A90126EE306F0038D4A8 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				2586A90226EE306F0038D4A8 /* SignupViewControllerTests.swift */,
+				2585C82126EEAFCB0070B1ED /* Signup */,
 				2586A90426EE306F0038D4A8 /* Info.plist */,
 			);
 			path = UITests;
