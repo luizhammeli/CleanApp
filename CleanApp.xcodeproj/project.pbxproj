@@ -371,6 +371,23 @@
 			path = InfraTests;
 			sourceTree = "<group>";
 		};
+		2585C81F26EEAF840070B1ED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2585C82026EEAF870070B1ED /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2585C82026EEAF870070B1ED /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				2586A91526EE358F0038D4A8 /* SignUpViewController.swift */,
+				2586A91926EE38050038D4A8 /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		2586A8DC26ED35D80038D4A8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,9 +442,8 @@
 		2586A8F626EE306E0038D4A8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2585C81F26EEAF840070B1ED /* Scenes */,
 				2586A8F826EE306E0038D4A8 /* Info.plist */,
-				2586A91526EE358F0038D4A8 /* SignUpViewController.swift */,
-				2586A91926EE38050038D4A8 /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
