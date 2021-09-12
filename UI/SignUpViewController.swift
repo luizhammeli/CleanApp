@@ -29,10 +29,11 @@ final class SignUpViewController: UIViewController {
     }
     
     @objc private func didTapSaveButton() {
-        signUp?(.init(name: nameTextField.text,
-                      email: emailTextField.text,
-                      password: passwordTextField.text,
-                      passwordConfirmation: passwordConfirmationTextField.text))
+        let signupViewModel = SignupViewModel(name: nameTextField.text,
+                                    email: emailTextField.text,
+                                    password: passwordTextField.text,
+                                    passwordConfirmation: passwordConfirmationTextField.text)
+        signUp?(signupViewModel)
     }
 }
 
