@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Domain
 
-public struct SignupViewModel {
+public struct SignupViewModel: Model {
     public let name: String?
     public let email: String?
     public let password: String?
