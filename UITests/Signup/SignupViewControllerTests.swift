@@ -35,20 +35,6 @@ class SignupViewControllerTests: XCTestCase {
     }
 }
 
-extension UIControl {
-    func simulate(event: UIControl.Event) {
-        allTargets.forEach { target in
-            actions(forTarget: target, forControlEvent: event)?.forEach { action in
-                (target as NSObject).perform(Selector(action))
-            }
-        }
-    }
-    
-    func simulateTap() {
-        simulate(event: .touchUpInside)
-    }
-}
-
 extension SignupViewControllerTests {
     private func makeSut(_ signUpSpy: ((SignupViewModel) -> Void)? = nil) -> SignUpViewController {
         let storyboard = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
