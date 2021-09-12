@@ -23,11 +23,10 @@ class SignupViewControllerTests: XCTestCase {
     }
     
     func test_() {
-        let sut = makeSut { viewModel in
-            XCTAssertEqual(viewModel, SignupViewModel(name: nil, email: nil, password: nil, passwordConfirmation: nil))
-        }
-        
+        var signupViewModel: SignupViewModel?
+        let sut = makeSut { signupViewModel = $0}
         sut.saveButton.simulateTap()
+        XCTAssertEqual(signupViewModel, .init(name: "", email: "", password: "", passwordConfirmation: "))
     }
 }
 
