@@ -6,11 +6,18 @@
 //
 
 import XCTest
-//@testable import UI
+@testable import UI
 
 class SignupViewControllerTests: XCTestCase {
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let sut = makeSut()
+        XCTAssertFalse(sut.loadingIndicator.isAnimating)        
+    }
+    
+    private func makeSut() -> SignUpViewController {
+        let storyboard = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
+        let sut = storyboard.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
+        sut.loadViewIfNeeded()
+        return sut
     }
 }
