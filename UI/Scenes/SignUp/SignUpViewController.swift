@@ -8,7 +8,7 @@
 import UIKit
 import Presentation
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -26,6 +26,7 @@ final class SignUpViewController: UIViewController {
     
     private func configure() {
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
+        hideKeyboardOnTap()
     }
     
     @objc private func didTapSaveButton() {
@@ -35,13 +36,17 @@ final class SignUpViewController: UIViewController {
                                     passwordConfirmation: passwordConfirmationTextField.text)
         signUp?(signupViewModel)
     }
+    
+
 }
 
 extension SignUpViewController: LoadingView {
     func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
+            saveButton.isEnabled = false
             loadingIndicator.startAnimating()
         } else {
+            saveButton.isEnabled = true
             loadingIndicator.stopAnimating()
         }
     }

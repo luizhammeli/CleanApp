@@ -22,6 +22,9 @@
 		257E08D026DC351F0030B859 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
 		257E08D326DC37EB0030B859 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 257E08D226DC37EB0030B859 /* Alamofire */; };
 		2585C82526EEAFF50070B1ED /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82426EEAFF50070B1ED /* TestExtensions.swift */; };
+		2585C82926F5F25D0070B1ED /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */; };
+		2585C82B26F5FA8E0070B1ED /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */; };
+		2585C82D26F5FAD80070B1ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82C26F5FAD80070B1ED /* Storyboarded.swift */; };
 		2586A8DB26EAE6C50038D4A8 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8DA26EAE6C50038D4A8 /* LoadingViewModel.swift */; };
 		2586A8DF26ED35F60038D4A8 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8DE26ED35F60038D4A8 /* TestFactories.swift */; };
 		2586A8E226ED36AE0038D4A8 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8E126ED36AE0038D4A8 /* AlertViewSpy.swift */; };
@@ -201,6 +204,9 @@
 		257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		257E08C226DC34E70030B859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2585C82426EEAFF50070B1ED /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		2585C82C26F5FAD80070B1ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2586A8DA26EAE6C50038D4A8 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		2586A8DE26ED35F60038D4A8 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		2586A8E126ED36AE0038D4A8 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -414,6 +420,16 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		2585C82726F5F1CF0070B1ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */,
+				2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */,
+				2585C82C26F5FAD80070B1ED /* Storyboarded.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2586A8DC26ED35D80038D4A8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +484,7 @@
 		2586A8F626EE306E0038D4A8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2585C82726F5F1CF0070B1ED /* Helpers */,
 				2585C81F26EEAF840070B1ED /* Scenes */,
 				2586A8F826EE306E0038D4A8 /* Info.plist */,
 			);
@@ -1091,7 +1108,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2585C82B26F5FA8E0070B1ED /* UIStoryboardExtensions.swift in Sources */,
+				2585C82926F5F25D0070B1ED /* UIViewControllerExtensions.swift in Sources */,
 				2586A91626EE358F0038D4A8 /* SignUpViewController.swift in Sources */,
+				2585C82D26F5FAD80070B1ED /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
