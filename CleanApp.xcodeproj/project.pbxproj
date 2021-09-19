@@ -71,6 +71,7 @@
 		25ACDDDE26F790DA0069EB75 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ACDD3A26F7558D0069EB75 /* Validation.framework */; };
 		25ACDDDF26F790DA0069EB75 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25ACDD3A26F7558D0069EB75 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25ACDDE426F7C1290069EB75 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */; };
+		25ACDDE726F7E8640069EB75 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ACDDE626F7E8640069EB75 /* SignUpComposer.swift */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25F0C58526E2713C00577B0C /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0C58426E2713C00577B0C /* ExtensionData.swift */; };
@@ -361,6 +362,7 @@
 		25ACDDB226F7695B0069EB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25ACDDC826F78D700069EB75 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		25ACDDE626F7E8640069EB75 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		25F0C58426E2713C00577B0C /* ExtensionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
 		25F0C58726E5495600577B0C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		25F0C58A26E54A1E00577B0C /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -738,6 +740,7 @@
 		25ACDD9826F769580069EB75 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				25ACDDE526F7E8530069EB75 /* Composer */,
 				25ACDDC726F78D480069EB75 /* Factories */,
 				25ACDD9926F769590069EB75 /* AppDelegate.swift */,
 				25ACDD9B26F769590069EB75 /* SceneDelegate.swift */,
@@ -764,6 +767,14 @@
 				25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		25ACDDE526F7E8530069EB75 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				25ACDDE626F7E8640069EB75 /* SignUpComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 		25F0C58326E2712600577B0C /* Helpers */ = {
@@ -1532,6 +1543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25ACDDE426F7C1290069EB75 /* UseCaseFactory.swift in Sources */,
+				25ACDDE726F7E8640069EB75 /* SignUpComposer.swift in Sources */,
 				25ACDDC926F78D700069EB75 /* ControllerFactory.swift in Sources */,
 				25ACDD9A26F769590069EB75 /* AppDelegate.swift in Sources */,
 				25ACDD9C26F769590069EB75 /* SceneDelegate.swift in Sources */,

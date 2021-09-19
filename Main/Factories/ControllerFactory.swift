@@ -14,7 +14,7 @@ import Domain
 import Infra
 
 final class ControllerFactory {
-    static func makeSignup(addAccount: RemoteAddAccount = UseCaseFactory.makeRemoteAddAccount()) -> SignUpViewController {
+    static func makeSignup(addAccount: AddAccount) -> SignUpViewController {
         let emailValidator = EmailValidatorAdapter()
         guard let controller = SignUpViewController.instantiate() else { fatalError("SignUpViewController should be not nil") }
         let presenter = SignupPresenter(alertView: controller, loadingView: controller, emailValidator: emailValidator, addAccount: addAccount)
