@@ -20,24 +20,30 @@
                                 <rect key="frame" x="23" y="25" width="274" height="518"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cQ0-dX-wMy">
-                                        <rect key="frame" x="0.0" y="0.0" width="274" height="157.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="147"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAE-8k-geZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="274" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="105.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="97"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="FavLang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-sB-Jw2">
-                                                <rect key="frame" x="0.0" y="124" width="274" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="113.5" width="274" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f04-6s-h1W">
+                                        <rect key="frame" x="0.0" y="167" width="274" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="bbC-kW-LXM"/>
+                                        </constraints>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVE-9d-FuG">
-                                        <rect key="frame" x="0.0" y="177.5" width="274" height="44"/>
+                                        <rect key="frame" x="0.0" y="192" width="274" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Cwy-fE-eSb"/>
                                         </constraints>
@@ -45,7 +51,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIB-FX-g75">
-                                        <rect key="frame" x="0.0" y="241.5" width="274" height="44"/>
+                                        <rect key="frame" x="0.0" y="256" width="274" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Mx7-VJ-gtt"/>
                                         </constraints>
@@ -53,7 +59,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Wc-o1n">
-                                        <rect key="frame" x="0.0" y="305.5" width="274" height="44"/>
+                                        <rect key="frame" x="0.0" y="320" width="274" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="4ww-In-mrZ"/>
                                         </constraints>
@@ -61,7 +67,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-zz-JDY">
-                                        <rect key="frame" x="0.0" y="369.5" width="274" height="44"/>
+                                        <rect key="frame" x="0.0" y="384" width="274" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="kTH-WV-qRg"/>
                                         </constraints>
@@ -69,7 +75,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-0V-KaJ">
-                                        <rect key="frame" x="0.0" y="433.5" width="274" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="448" width="274" height="0.0"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLH-bI-kFO">
                                         <rect key="frame" x="0.0" y="468" width="274" height="50"/>
