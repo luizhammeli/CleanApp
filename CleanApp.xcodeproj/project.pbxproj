@@ -47,6 +47,10 @@
 		2590110D26E698D800A4124C /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110C26E698D800A4124C /* AlertViewModel.swift */; };
 		2590111026E6A31E00A4124C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2590110F26E6A31E00A4124C /* EmailValidator.swift */; };
 		2590111126E76E9B00A4124C /* AccountModelFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94C26D87CD700F72A14 /* AccountModelFactories.swift */; };
+		25ACDD4326F7558D0069EB75 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ACDD3A26F7558D0069EB75 /* Validation.framework */; };
+		25ACDD4826F7558D0069EB75 /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ACDD4726F7558D0069EB75 /* ValidationTests.swift */; };
+		25ACDD5126F756450069EB75 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259010E626E643D300A4124C /* Presentation.framework */; };
+		25ACDD5226F756450069EB75 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259010E626E643D300A4124C /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25F0C58526E2713C00577B0C /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0C58426E2713C00577B0C /* ExtensionData.swift */; };
@@ -106,6 +110,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 25F1420C26CB45B6004B7738;
 			remoteInfo = Domain;
+		};
+		25ACDD4426F7558D0069EB75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25F141F426CB45A0004B7738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25ACDD3926F7558D0069EB75;
+			remoteInfo = Validation;
+		};
+		25ACDD5326F756450069EB75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25F141F426CB45A0004B7738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 259010E526E643D300A4124C;
+			remoteInfo = Presentation;
 		};
 		25BFAE0C26D881CD001EB57E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -178,6 +196,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25ACDD5526F756450069EB75 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25ACDD5226F756450069EB75 /* Presentation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25BFAE0E26D881CD001EB57E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +259,11 @@
 		2590110826E6785200A4124C /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		2590110C26E698D800A4124C /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		2590110F26E6A31E00A4124C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		25ACDD3A26F7558D0069EB75 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25ACDD3D26F7558D0069EB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25ACDD4226F7558D0069EB75 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25ACDD4726F7558D0069EB75 /* ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTests.swift; sourceTree = "<group>"; };
+		25ACDD4926F7558D0069EB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F0C58426E2713C00577B0C /* ExtensionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
 		25F0C58726E5495600577B0C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		25F0C58A26E54A1E00577B0C /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -298,6 +332,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				259010EF26E643D300A4124C /* Presentation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD3726F7558D0069EB75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25ACDD5126F756450069EB75 /* Presentation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD3F26F7558D0069EB75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25ACDD4326F7558D0069EB75 /* Validation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +600,23 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		25ACDD3B26F7558D0069EB75 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				25ACDD3D26F7558D0069EB75 /* Info.plist */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		25ACDD4626F7558D0069EB75 /* ValidationTests */ = {
+			isa = PBXGroup;
+			children = (
+				25ACDD4726F7558D0069EB75 /* ValidationTests.swift */,
+				25ACDD4926F7558D0069EB75 /* Info.plist */,
+			);
+			path = ValidationTests;
+			sourceTree = "<group>";
+		};
 		25F0C58326E2712600577B0C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +664,8 @@
 				259010F226E643D300A4124C /* PresentationTests */,
 				2586A8F626EE306E0038D4A8 /* UI */,
 				2586A90126EE306F0038D4A8 /* UITests */,
+				25ACDD3B26F7558D0069EB75 /* Validation */,
+				25ACDD4626F7558D0069EB75 /* ValidationTests */,
 				25F141FE26CB45A0004B7738 /* Products */,
 				25F1423126CB45C9004B7738 /* Frameworks */,
 			);
@@ -615,6 +684,8 @@
 				259010EE26E643D300A4124C /* PresentationTests.xctest */,
 				2586A8F526EE306E0038D4A8 /* UI.framework */,
 				2586A8FD26EE306F0038D4A8 /* UITests.xctest */,
+				25ACDD3A26F7558D0069EB75 /* Validation.framework */,
+				25ACDD4226F7558D0069EB75 /* ValidationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -720,6 +791,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		259010E126E643D300A4124C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD3526F7558D0069EB75 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -860,6 +938,44 @@
 			productReference = 259010EE26E643D300A4124C /* PresentationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		25ACDD3926F7558D0069EB75 /* Validation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25ACDD4B26F7558D0069EB75 /* Build configuration list for PBXNativeTarget "Validation" */;
+			buildPhases = (
+				25ACDD3526F7558D0069EB75 /* Headers */,
+				25ACDD3626F7558D0069EB75 /* Sources */,
+				25ACDD3726F7558D0069EB75 /* Frameworks */,
+				25ACDD3826F7558D0069EB75 /* Resources */,
+				25ACDD5526F756450069EB75 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25ACDD5426F756450069EB75 /* PBXTargetDependency */,
+			);
+			name = Validation;
+			productName = Validation;
+			productReference = 25ACDD3A26F7558D0069EB75 /* Validation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		25ACDD4126F7558D0069EB75 /* ValidationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25ACDD4E26F7558D0069EB75 /* Build configuration list for PBXNativeTarget "ValidationTests" */;
+			buildPhases = (
+				25ACDD3E26F7558D0069EB75 /* Sources */,
+				25ACDD3F26F7558D0069EB75 /* Frameworks */,
+				25ACDD4026F7558D0069EB75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25ACDD4526F7558D0069EB75 /* PBXTargetDependency */,
+			);
+			name = ValidationTests;
+			productName = ValidationTests;
+			productReference = 25ACDD4226F7558D0069EB75 /* ValidationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		25F0C58F26E5519B00577B0C /* UseCasesIntegrationTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25F0C59826E5519B00577B0C /* Build configuration list for PBXNativeTarget "UseCasesIntegrationTests" */;
@@ -966,6 +1082,12 @@
 					259010ED26E643D300A4124C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					25ACDD3926F7558D0069EB75 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					25ACDD4126F7558D0069EB75 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					25F0C58F26E5519B00577B0C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -1006,6 +1128,8 @@
 				259010ED26E643D300A4124C /* PresentationTests */,
 				2586A8F426EE306E0038D4A8 /* UI */,
 				2586A8FC26EE306F0038D4A8 /* UITests */,
+				25ACDD3926F7558D0069EB75 /* Validation */,
+				25ACDD4126F7558D0069EB75 /* ValidationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1048,6 +1172,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		259010EC26E643D300A4124C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD3826F7558D0069EB75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD4026F7558D0069EB75 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1152,6 +1290,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25ACDD3626F7558D0069EB75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25ACDD3E26F7558D0069EB75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25ACDD4826F7558D0069EB75 /* ValidationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25F0C58C26E5519B00577B0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1227,6 +1380,16 @@
 			isa = PBXTargetDependency;
 			target = 25F1420C26CB45B6004B7738 /* Domain */;
 			targetProxy = 2590110526E6696800A4124C /* PBXContainerItemProxy */;
+		};
+		25ACDD4526F7558D0069EB75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25ACDD3926F7558D0069EB75 /* Validation */;
+			targetProxy = 25ACDD4426F7558D0069EB75 /* PBXContainerItemProxy */;
+		};
+		25ACDD5426F756450069EB75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 259010E526E643D300A4124C /* Presentation */;
+			targetProxy = 25ACDD5326F756450069EB75 /* PBXContainerItemProxy */;
 		};
 		25BFAE0D26D881CD001EB57E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1370,7 +1533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1397,7 +1560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1417,7 +1580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1437,7 +1600,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1531,6 +1694,94 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		25ACDD4C26F7558D0069EB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M2DD4Z95YZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Validation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.Validation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		25ACDD4D26F7558D0069EB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M2DD4Z95YZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Validation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.Validation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		25ACDD4F26F7558D0069EB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M2DD4Z95YZ;
+				INFOPLIST_FILE = ValidationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.ValidationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		25ACDD5026F7558D0069EB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M2DD4Z95YZ;
+				INFOPLIST_FILE = ValidationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LuizHammerli.ValidationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1887,6 +2138,24 @@
 			buildConfigurations = (
 				259010F926E643D400A4124C /* Debug */,
 				259010FA26E643D400A4124C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25ACDD4B26F7558D0069EB75 /* Build configuration list for PBXNativeTarget "Validation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25ACDD4C26F7558D0069EB75 /* Debug */,
+				25ACDD4D26F7558D0069EB75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25ACDD4E26F7558D0069EB75 /* Build configuration list for PBXNativeTarget "ValidationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25ACDD4F26F7558D0069EB75 /* Debug */,
+				25ACDD5026F7558D0069EB75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
