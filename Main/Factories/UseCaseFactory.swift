@@ -15,6 +15,5 @@ final class UseCaseFactory {
         let postClient = AlamofireAdapter()
         let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
         return RemoteAddAccount(url: url, postClient: postClient)
-    }
-    
+    }    
 }
