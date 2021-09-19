@@ -8,7 +8,7 @@
 import XCTest
 import Validation
 
-final class ValidationTests: XCTestCase {
+final class EmailValidatorAdapterTests: XCTestCase {
     func test_invalid_emails() {
         let sut = makeSut()
         XCTAssertFalse(sut.isValid(email: ""))
@@ -28,7 +28,7 @@ final class ValidationTests: XCTestCase {
     }
 }
 
-extension ValidationTests {
+private extension EmailValidatorAdapterTests {
     func makeSut() -> EmailValidatorAdapter {
         let sut = EmailValidatorAdapter()
         return sut
