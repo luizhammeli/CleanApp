@@ -70,6 +70,7 @@
 		25ACDDDB26F790DA0069EB75 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2586A8F526EE306E0038D4A8 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25ACDDDE26F790DA0069EB75 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ACDD3A26F7558D0069EB75 /* Validation.framework */; };
 		25ACDDDF26F790DA0069EB75 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25ACDD3A26F7558D0069EB75 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25ACDDE426F7C1290069EB75 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25F0C58526E2713C00577B0C /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0C58426E2713C00577B0C /* ExtensionData.swift */; };
@@ -359,6 +360,7 @@
 		25ACDDB026F7695B0069EB75 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		25ACDDB226F7695B0069EB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25ACDDC826F78D700069EB75 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		25F0C58426E2713C00577B0C /* ExtensionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
 		25F0C58726E5495600577B0C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		25F0C58A26E54A1E00577B0C /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -759,6 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				25ACDDC826F78D700069EB75 /* ControllerFactory.swift */,
+				25ACDDE326F7C1290069EB75 /* UseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1528,6 +1531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25ACDDE426F7C1290069EB75 /* UseCaseFactory.swift in Sources */,
 				25ACDDC926F78D700069EB75 /* ControllerFactory.swift in Sources */,
 				25ACDD9A26F769590069EB75 /* AppDelegate.swift in Sources */,
 				25ACDD9C26F769590069EB75 /* SceneDelegate.swift in Sources */,
