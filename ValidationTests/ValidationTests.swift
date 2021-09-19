@@ -6,18 +6,7 @@
 //
 
 import XCTest
-import Presentation
-//@testable import Validation
-
-final class EmailValidatorAdapter: EmailValidator {
-    func isValid(email: String) -> Bool {
-        let pattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let range = NSRange(location: 0, length: email.utf16.count)
-        guard let regex = try?  NSRegularExpression(pattern: pattern) else { return false }
-        let isValidEmail = regex.firstMatch(in: email, range: range) != nil
-        return isValidEmail
-    }
-}
+import Validation
 
 final class ValidationTests: XCTestCase {
     func test_invalid_emails() {
@@ -36,5 +25,12 @@ final class ValidationTests: XCTestCase {
         XCTAssertTrue(sut.isValid(email: "luiz@gmail.com.br"))
         XCTAssertTrue(sut.isValid(email: "luiz@gmail.org"))
         XCTAssertTrue(sut.isValid(email: "luiz@gmail.org.br"))
+    }
+}
+
+extension ValidationTests {
+    func makeSut() -> EmailValidatorAdapter {
+        let sut = EmailValidatorAdapter()
+        return sut
     }
 }
