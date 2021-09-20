@@ -12,7 +12,7 @@ import Data
 
 final class UseCaseFactory {
     private static let httpPostClient = AlamofireAdapter()
-    private static let apiBaseURL = "https://fordevs.herokuapp.com/api/"
+    private static let apiBaseURL = Environment.variable(for: .apiBaseURL)
     
     static func makeURL(with path: String) -> URL {
         return URL(string: "\(apiBaseURL)\(path)")!
