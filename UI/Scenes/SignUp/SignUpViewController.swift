@@ -19,7 +19,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     public var signUp: ((SignupViewModel) -> Void)?
     
     public override func viewDidLoad () {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         configure()
     }
     
@@ -30,9 +30,9 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     
     @objc private func didTapSaveButton() {
         let signupViewModel = SignupViewModel(name: nameTextField.text,
-                                    email: emailTextField.text,
-                                    password: passwordTextField.text,
-                                    passwordConfirmation: passwordConfirmationTextField.text)
+                                              email: emailTextField.text,
+                                              password: passwordTextField.text,
+                                              passwordConfirmation: passwordConfirmationTextField.text)
         signUp?(signupViewModel)
     }
 }
@@ -40,11 +40,11 @@ public final class SignUpViewController: UIViewController, Storyboarded {
 extension SignUpViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
-            saveButton.isEnabled = false
-            loadingIndicator.startAnimating()
+            self.saveButton.isEnabled = false
+            self.loadingIndicator.startAnimating()
         } else {
-            saveButton.isEnabled = true
-            loadingIndicator.stopAnimating()
+            self.saveButton.isEnabled = true
+            self.loadingIndicator.stopAnimating()
         }
     }
 }

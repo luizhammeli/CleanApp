@@ -9,6 +9,7 @@ import Foundation
 import Domain
 import Infra
 import Data
+import SwiftUI
 
 final class UseCaseFactory {
     private static let httpPostClient = AlamofireAdapter()
@@ -18,7 +19,8 @@ final class UseCaseFactory {
         return URL(string: "\(apiBaseURL)\(path)")!
     }
     
-    static func makeRemoteAddAccount() -> RemoteAddAccount {        
-        return RemoteAddAccount(url: makeURL(with: "signup"), postClient: httpPostClient)
+    static func makeRemoteAddAccount() -> AddAccount {        
+        let remoteAddAccount = RemoteAddAccount(url: makeURL(with: "signup"), postClient: httpPostClient)
+        return MainQueueDispatchDecorator(instance: remoteAddAccount)
     }    
 }
