@@ -10,7 +10,7 @@ import UI
 @testable import Main
 
 final class SignUpIntegrationTests: XCTestCase {
-    func test_ui_presentation_integration_should_not_create_memory_leaks() {        
+    func test_background_request_should_complete_on_main_thread() {
         let (sut, addAcountSpy) = makeSut()
         sut.loadViewIfNeeded()
         sut.signUp?(makeSignUpViewModel())
@@ -20,6 +20,10 @@ final class SignUpIntegrationTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 0.1)
+    }
+    
+    func test_compose_with_correct_validation() {
+        
     }
 }
 
