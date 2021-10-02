@@ -8,7 +8,7 @@
 import Foundation
 import Presentation
 
-public final class EmailValidation: Validation {
+public final class EmailValidation: Validation, Equatable {
     private let fieldName: String
     private let fieldLabel: String
     private let validator: EmailValidator
@@ -24,5 +24,10 @@ public final class EmailValidation: Validation {
             return "O campo \(fieldLabel) é inválido"
         }
         return nil
+    }
+    
+    
+    public static func == (lhs: EmailValidation, rhs: EmailValidation) -> Bool {
+        return lhs.fieldName == rhs.fieldName && lhs.fieldLabel == rhs.fieldLabel
     }
 }

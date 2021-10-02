@@ -7,6 +7,7 @@
 
 import XCTest
 import UI
+import Validation
 @testable import Main
 
 final class SignUpIntegrationTests: XCTestCase {
@@ -23,7 +24,15 @@ final class SignUpIntegrationTests: XCTestCase {
     }
     
     func test_compose_with_correct_validation() {
-        
+        let validations = SignUpComposer.makeValidations()
+        XCTAssertEqual(validations[0] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "name", fieldLabel: "Nome"))
+        XCTAssertEqual(validations[1] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "email", fieldLabel: "Email"))
+        XCTAssertEqual(validations[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", validator: EmailValidatorSpy()))
+        XCTAssertEqual(validations[3] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"))
+        XCTAssertEqual(validations[4] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha"))
+        XCTAssertEqual(validations[5] as! CompareFieldValidation, CompareFieldValidation(fieldName: "password",
+                                                                                         fieldToCompare: "passwordConfirmation",
+                                                                                         fieldLabel: "Senha"))
     }
 }
 

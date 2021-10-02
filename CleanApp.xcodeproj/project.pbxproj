@@ -105,6 +105,7 @@
 		25F1424526CB4612004B7738 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1424226CB4612004B7738 /* HttpPostClient.swift */; };
 		25F1424626CB4612004B7738 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1424426CB4612004B7738 /* RemoteAddAccount.swift */; };
 		25F1424926CB4632004B7738 /* RemoteAddAcountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1424826CB4632004B7738 /* RemoteAddAcountTests.swift */; };
+		25FEB0022708E56F00F68AF9 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8E626ED36E50038D4A8 /* EmailValidatorSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1692,6 +1693,7 @@
 				25E662D226F7F34400AD07F9 /* AddAcountSpy.swift in Sources */,
 				25032F2B26FC12210048BE3E /* TestFactories.swift in Sources */,
 				25E662D326F7F49900AD07F9 /* TestExtensions.swift in Sources */,
+				25FEB0022708E56F00F68AF9 /* EmailValidatorSpy.swift in Sources */,
 				25ACDDB126F7695B0069EB75 /* SignUpIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

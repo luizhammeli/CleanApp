@@ -16,7 +16,7 @@ import Infra
 public final class SignUpComposer {
     static func composeController(with addAccount: AddAccount = UseCaseFactory.makeRemoteAddAccount()) -> SignUpViewController {
         guard let controller = SignUpViewController.instantiate() else { fatalError("SignUpViewController should be not nil") }
-        let validationComposite = ValidationComposite(validations: makeValidation())
+        let validationComposite = ValidationComposite(validations: makeValidations())
         let presenter = SignupPresenter(alertView: WeakVarProxy(controller),
                                         loadingView: WeakVarProxy(controller),
                                         addAccount: addAccount,
@@ -25,14 +25,13 @@ public final class SignUpComposer {
         return controller
     }
     
-    static private func makeValidation() -> [Validation] {
+    static func makeValidations() -> [Validation] {
         return [RequiredFieldsValidation(fieldName: "name", fieldLabel: "Nome"),
                 RequiredFieldsValidation(fieldName: "email", fieldLabel: "Email"),
                 EmailValidation(fieldName: "email", fieldLabel: "Email", validator: EmailValidatorAdapter()),
-                RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"),
-                RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"),
+                RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"),                
                 RequiredFieldsValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha"),
-                CompareFieldValidation(fieldName: "password", fieldToCompare: "passwordConfirmation", fieldLabel: "password")
+                CompareFieldValidation(fieldName: "password", fieldToCompare: "passwordConfirmation", fieldLabel: "Senha")
         ]
     }
 }
