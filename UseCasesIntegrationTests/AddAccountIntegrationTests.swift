@@ -22,7 +22,6 @@ class AddAccountIntegrationTests: XCTestCase {
             switch result {
             case .success(let accountModel):
                 XCTAssertNotNil(accountModel.accessToken)
-                XCTAssertEqual(accountModel.name, addAccountModel.name)                
             case .failure(let error):
                 XCTFail("Should complete with success instead \(error) failure")
             }

@@ -8,7 +8,7 @@ import Foundation
 import Domain
 
 func makeAccountModel() -> AccountModel {
-    AccountModel(accessToken: "123", name: "Test User")
+    AccountModel(accessToken: "123")
 }
 
 func makeAddAccountModel() -> AddAccountModel {
