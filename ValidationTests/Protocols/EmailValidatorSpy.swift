@@ -5,7 +5,7 @@
 //  Created by Luiz Diniz Hammerli on 11/09/21.
 //
 
-import Presentation
+import Validation
 
 final class EmailValidatorSpy: EmailValidator {
     private var isValid = true

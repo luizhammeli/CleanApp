@@ -7,10 +7,11 @@
 
 import XCTest
 import UI
+import Validation
 @testable import Main
 
 final class SignUpIntegrationTests: XCTestCase {
-    func test_ui_presentation_integration_should_not_create_memory_leaks() {        
+    func test_background_request_should_complete_on_main_thread() {
         let (sut, addAcountSpy) = makeSut()
         sut.loadViewIfNeeded()
         sut.signUp?(makeSignUpViewModel())
@@ -20,6 +21,18 @@ final class SignUpIntegrationTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 0.1)
+    }
+    
+    func test_compose_with_correct_validation() {
+        let validations = SignUpComposer.makeValidations()
+        XCTAssertEqual(validations[0] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "name", fieldLabel: "Nome"))
+        XCTAssertEqual(validations[1] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "email", fieldLabel: "Email"))
+        XCTAssertEqual(validations[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", validator: EmailValidatorSpy()))
+        XCTAssertEqual(validations[3] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"))
+        XCTAssertEqual(validations[4] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha"))
+        XCTAssertEqual(validations[5] as! CompareFieldValidation, CompareFieldValidation(fieldName: "password",
+                                                                                         fieldToCompare: "passwordConfirmation",
+                                                                                         fieldLabel: "Senha"))
     }
 }
 
