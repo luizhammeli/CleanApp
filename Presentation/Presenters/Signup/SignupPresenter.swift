@@ -25,7 +25,7 @@ public final class SignupPresenter {
             let alertViewModel = AlertViewModel(title: "Falha na validação", message: error)
             alertView.showMessage(viewModel: alertViewModel)
         } else {
-            guard let addAccountModel = SignupMapper.toAddAccountModel(with: viewModel) else { return }
+            guard let addAccountModel = viewModel.toAddAccountModel() else { return }
             loadingView.display(viewModel: .init(isLoading: true))
             
             addAccount.add(addAccountModel: addAccountModel, completion: { [weak self] result in
@@ -40,25 +40,4 @@ public final class SignupPresenter {
             })
         }
     }
-    
-//    private func validate(viewModel: SignupViewModel) -> String? {
-//        guard let name = viewModel.name, !name.isEmpty else {
-//            return "O campo Nome é obrigatório"
-//        }
-//        guard let email = viewModel.email, !email.isEmpty else {
-//            return "O campo Email é obrigatório"
-//        }
-//        guard let password = viewModel.password, !password.isEmpty else {
-//            return "O campo Senha é obrigatório"
-//        }
-//        guard let passwordConfirmation = viewModel.passwordConfirmation, !passwordConfirmation.isEmpty else {
-//            return "O campo Confirmar Senha é obrigatório"
-//        }
-//        guard password == passwordConfirmation else {
-//            return "Os campos Senha e Confirmar Senha devem ser iguais"
-//        }
-//        guard emailValidator.isValid(email: email) else { return  "O Email inserido é inválido" }
-//        
-//        return nil
-//    }
 }
