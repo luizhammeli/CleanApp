@@ -29,6 +29,13 @@ class RemoteAddAcountTests: XCTestCase {
         }
     }
     
+    func test_add_should_complete_with_email_in_use_error_if_client_completes_with_forbidden_error() throws {
+        let (sut, postClient) = makeSut()
+        expect(sut: sut, with: .failure(.emailInUse)) {
+            postClient.completeWithError(error: .forbidden)
+        }
+    }
+    
     func test_add_should_complete_with_success_if_client_completes_with_data() throws {
         let (sut, postClient) = makeSut()
         expect(sut: sut, with: .success(makeAccountModel())) {

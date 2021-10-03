@@ -20,14 +20,19 @@ public final class RemoteAddAccount: AddAccount {
         postClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
             guard self != nil else { return }            
             switch result {
-            case .failure:
-                completion(.failure(.unexpected))
             case .success(let data):
                 guard let accountModel: AccountModel = data?.toObject() else {
                     completion(.failure(.invalidData))
                     return
                 }         
                 completion(.success(accountModel))
+            case .failure(let error):
+                switch error {
+                case .forbidden:
+                    completion(.failure(.unexpected))
+                default:
+                    completion(.failure(.unexpected))
+                }
             }
         }
     }
