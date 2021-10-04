@@ -36,14 +36,14 @@ public final class SignupPresenter {
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso",
                                                                          message: "Conta criada com sucesso."))
                 case .failure(let error):
+                    let message: String
                     switch error {
                     case .emailInUse:
-                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
-                                                                             message: "Email já cadastrado"))
+                        message = "Email já cadastrado"
                     default:
-                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
-                                                                             message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
+                        message = "Ocorreu um erro ao realizar o cadastro, tente novamente."
                     }
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: message))
                 }
             })
         }
