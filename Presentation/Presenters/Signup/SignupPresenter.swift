@@ -32,10 +32,18 @@ public final class SignupPresenter {
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: .init(isLoading: false))
                 switch result {
-                case .failure:
-                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
                 case .success:
-                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso",
+                                                                         message: "Conta criada com sucesso."))
+                case .failure(let error):
+                    switch error {
+                    case .emailInUse:
+                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
+                                                                             message: "Email já cadastrado"))
+                    default:
+                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro",
+                                                                             message: "Ocorreu um erro ao realizar o cadastro, tente novamente."))
+                    }
                 }
             })
         }

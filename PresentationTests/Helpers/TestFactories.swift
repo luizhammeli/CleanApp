@@ -14,13 +14,6 @@ func makeSignUpViewModel(name: String? = "Test User",
     return SignupViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }
 
-func makeRequiredAlertViewModel(fieldName: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é obrigatório")
-}
-
-func makeValidationAlertViewModel(message: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na validação", message: message)
-}
 
 func makeSignupErrorAlertViewModel() -> AlertViewModel {
     return AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente.")
