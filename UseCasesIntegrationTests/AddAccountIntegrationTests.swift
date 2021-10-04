@@ -10,47 +10,39 @@ import Data
 import Infra
 import Domain
 
-class AddAccountIntegrationTests: XCTestCase {
-    static var email: String = "test_user_api_\(UUID().description)@gmail.com"
-    
+final class AddAccountIntegrationTests: XCTestCase {
     func test_add_account() {
-        makeRequest(with: AddAccountIntegrationTests.email) { result in
-            switch result {
-            case .success(let accountModel):
-                XCTAssertNotNil(accountModel.accessToken)
-            case .failure(let error):
-                XCTFail("Should complete with success instead \(error) failure")
-            }
+        let addAccount = makeAddAccount()
+        let model = makeAddAccountModel()
+        
+        let expectation = expectation(description: "waiting")
+        addAccount.add(addAccountModel: model) { result in
+            guard case .success(let accountModel) = result else { return XCTFail("Should complete with success instead failure") }
+            XCTAssertNotNil(accountModel.accessToken)
+            expectation.fulfill()
         }
-    }
-    
-    func test_add_account_should_complete_with_email_in_use_error() {
-        self.makeRequest(with: AddAccountIntegrationTests.email) { result in
-            switch result {
-            case .success:
-                XCTFail("Should complete with failure instead success")
-            case .failure(let error):
-                XCTAssertEqual(error, .emailInUse)
-            }
+        
+        wait(for: [expectation], timeout: 10)
+        
+        let expectation2 = XCTestExpectation()
+        addAccount.add(addAccountModel: model) { result in
+            guard case .failure(let error) = result, error == .emailInUse else { return XCTFail("Should complete with failure instead success") }
+            expectation2.fulfill()
         }
+        
+        wait(for: [expectation2], timeout: 10)
     }
 }
 
-extension AddAccountIntegrationTests {
-    func makeRequest(with email: String, completion: ((Result<AccountModel, DomainError>) -> Void)?) {
+private extension AddAccountIntegrationTests {
+    private func makeAddAccount() -> AddAccount {
         let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
         let postClient = AlamofireAdapter()
-        let addAccount = RemoteAddAccount(url: url, postClient: postClient)
-        let addAccountModel = AddAccountModel(name: "Teste Nome", email: email, password: "teste123", passwordConfirmation: "teste123")
-        let expectation = expectation(description: "waiting")
-        addAccount.add(addAccountModel: addAccountModel) { receivedResult in
-            completion?(receivedResult)
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 10)
+        return RemoteAddAccount(url: url, postClient: postClient)
     }
     
-    func makeEmail() -> String {
-        return "test_user_api_\(UUID().description)@gmail.com"
+    private func makeAddAccountModel() -> AddAccountModel {
+        let email: String = "test_user_api_\(UUID().description)@gmail.com"
+        return AddAccountModel(name: "Teste Nome", email: email, password: "teste123", passwordConfirmation: "teste123")
     }
 }

@@ -53,7 +53,7 @@ class RemoteAddAcountTests: XCTestCase {
     func test_add_should_not_complete_if_client_has_been_deallocated() throws {
         let postClient = HttpClientSpy()
         var sut: RemoteAddAccount? = RemoteAddAccount(url: makeFakeURL(), postClient: postClient)
-        var result: Result<AccountModel, DomainError>?
+        var result: AddAccount.Result?
         sut?.add(addAccountModel: makeAddAccountModel(), completion: { result = $0 })
         sut = nil
         postClient.completeWithSuccess(data: makeInvalidData())
@@ -69,7 +69,7 @@ extension RemoteAddAcountTests {
         return (sut, postClient)
     }
     
-    func expect(sut: RemoteAddAccount, with expectedResult: Result<AccountModel, DomainError>, when action: @escaping (() -> Void), file: StaticString = #filePath, line: UInt = #line) {
+    func expect(sut: RemoteAddAccount, with expectedResult: AddAccount.Result, when action: @escaping (() -> Void), file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
