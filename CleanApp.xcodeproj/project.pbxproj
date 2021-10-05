@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		25032F2B26FC12210048BE3E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8DE26ED35F60038D4A8 /* TestFactories.swift */; };
+		25206CA9270BCE1500CA94B5 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25206CA8270BCE1500CA94B5 /* images.xcassets */; };
+		25206CAB270BDEDE00CA94B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAA270BDEDE00CA94B5 /* UIColorExtension.swift */; };
+		25206CAD270BDEFA00CA94B5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAC270BDEFA00CA94B5 /* Color.swift */; };
+		25206CB0270BE18E00CA94B5 /* RoundedCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -325,6 +329,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25206CA8270BCE1500CA94B5 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		25206CAA270BDEDE00CA94B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		25206CAC270BDEFA00CA94B5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCustomTextField.swift; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -536,6 +544,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25206CA7270BCDFE00CA94B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25206CA8270BCE1500CA94B5 /* images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25206CAE270BE17A00CA94B5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		254F70DB26D130CF00BD6F51 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +661,8 @@
 				2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */,
 				2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */,
 				2585C82C26F5FAD80070B1ED /* Storyboarded.swift */,
+				25206CAA270BDEDE00CA94B5 /* UIColorExtension.swift */,
+				25206CAC270BDEFA00CA94B5 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -694,6 +720,8 @@
 		2586A8F626EE306E0038D4A8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				25206CAE270BE17A00CA94B5 /* Components */,
+				25206CA7270BCDFE00CA94B5 /* Resources */,
 				2585C82726F5F1CF0070B1ED /* Helpers */,
 				2585C81F26EEAF840070B1ED /* Scenes */,
 				2586A8F826EE306E0038D4A8 /* Info.plist */,
@@ -1488,6 +1516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2586A91A26EE38050038D4A8 /* SignUp.storyboard in Resources */,
+				25206CA9270BCE1500CA94B5 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,8 +1629,11 @@
 			files = (
 				2585C82B26F5FA8E0070B1ED /* UIStoryboardExtensions.swift in Sources */,
 				2585C82926F5F25D0070B1ED /* UIViewControllerExtensions.swift in Sources */,
+				25206CAB270BDEDE00CA94B5 /* UIColorExtension.swift in Sources */,
 				2586A91626EE358F0038D4A8 /* SignUpViewController.swift in Sources */,
+				25206CB0270BE18E00CA94B5 /* RoundedCustomTextField.swift in Sources */,
 				2585C82D26F5FAD80070B1ED /* Storyboarded.swift in Sources */,
+				25206CAD270BDEFA00CA94B5 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
     
     public var signUp: ((SignupViewModel) -> Void)?
     
@@ -26,6 +27,8 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     private func configure() {
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
         hideKeyboardOnTap()
+        configureStackView()
+        saveButton.layer.cornerRadius = 8
     }
     
     @objc private func didTapSaveButton() {
@@ -34,6 +37,11 @@ public final class SignUpViewController: UIViewController, Storyboarded {
                                               password: passwordTextField.text,
                                               passwordConfirmation: passwordConfirmationTextField.text)
         signUp?(signupViewModel)
+    }
+    
+    private func configureStackView() {
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     }
 }
 
