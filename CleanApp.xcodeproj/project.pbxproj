@@ -12,6 +12,7 @@
 		25206CAB270BDEDE00CA94B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAA270BDEDE00CA94B5 /* UIColorExtension.swift */; };
 		25206CAD270BDEFA00CA94B5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAC270BDEFA00CA94B5 /* Color.swift */; };
 		25206CB0270BE18E00CA94B5 /* RoundedCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */; };
+		25206CB2270D194F00CA94B5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CB1270D194F00CA94B5 /* CustomNavigationController.swift */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -336,6 +337,7 @@
 		25206CAA270BDEDE00CA94B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		25206CAC270BDEFA00CA94B5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCustomTextField.swift; sourceTree = "<group>"; };
+		25206CB1270D194F00CA94B5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */,
+				25206CB1270D194F00CA94B5 /* CustomNavigationController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1664,6 +1667,7 @@
 				2585C82926F5F25D0070B1ED /* UIViewControllerExtensions.swift in Sources */,
 				25206CAB270BDEDE00CA94B5 /* UIColorExtension.swift in Sources */,
 				2586A91626EE358F0038D4A8 /* SignUpViewController.swift in Sources */,
+				25206CB2270D194F00CA94B5 /* CustomNavigationController.swift in Sources */,
 				25206CB0270BE18E00CA94B5 /* RoundedCustomTextField.swift in Sources */,
 				2585C82D26F5FAD80070B1ED /* Storyboarded.swift in Sources */,
 				25206CAD270BDEFA00CA94B5 /* Color.swift in Sources */,
