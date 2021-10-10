@@ -100,7 +100,6 @@ final class LoginPresenterTests: XCTestCase {
         authentication.completeWithSucess()
         wait(for: [expectation], timeout: 1)
     }
-    
 }
 
 extension LoginPresenterTests {
