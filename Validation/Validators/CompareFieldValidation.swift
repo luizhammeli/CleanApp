@@ -22,9 +22,7 @@ public final class CompareFieldValidation: Validation, Equatable {
     public func validade(data: [String : Any]?) -> String? {
         guard let fieldValue = data?[fieldName] as? String,
               let fieldToCompare = data?[fieldToCompare] as? String,
-              fieldValue == fieldToCompare else {
-                  return "O campo \(fieldLabel) é inválido"
-              }
+              fieldValue == fieldToCompare else { return "O campo \(fieldLabel) é inválido" }
         return nil
     }
     

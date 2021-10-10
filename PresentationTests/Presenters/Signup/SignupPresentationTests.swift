@@ -9,7 +9,7 @@ import XCTest
 import Presentation
 import Domain
 
-final class PresentationTests: XCTestCase {
+final class SignupPresentationTests: XCTestCase {
     func test_should_call_add_method_with_correct_values() throws {
         let addAccount = AddAcountSpy()
         let alertView = AlertViewSpy()
@@ -102,7 +102,7 @@ final class PresentationTests: XCTestCase {
     }
 }
 
-extension PresentationTests {
+extension SignupPresentationTests {
     private func makeSut(alertView: AlertViewSpy = AlertViewSpy(),
                          loadingView: LoadingView = LoadingViewSpy(),
                          addAccount: AddAccount = AddAcountSpy(),

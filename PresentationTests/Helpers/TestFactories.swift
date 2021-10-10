@@ -14,6 +14,10 @@ func makeSignUpViewModel(name: String? = "Test User",
     return SignupViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }
 
+func makeLoginViewModel(email: String? = "teste@mail.com",
+                        password: String? = "passwordTest") -> LoginViewModel {
+    return LoginViewModel(email: email, password: password)
+}
 
 func makeSignupErrorAlertViewModel() -> AlertViewModel {
     return AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente.")
