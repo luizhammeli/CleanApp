@@ -13,6 +13,9 @@
 		25206CAD270BDEFA00CA94B5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAC270BDEFA00CA94B5 /* Color.swift */; };
 		25206CB0270BE18E00CA94B5 /* RoundedCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */; };
 		25206CB2270D194F00CA94B5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CB1270D194F00CA94B5 /* CustomNavigationController.swift */; };
+		25206CB4270E75A000CA94B5 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CB3270E75A000CA94B5 /* Authentication.swift */; };
+		25206CB6270E763E00CA94B5 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CB5270E763E00CA94B5 /* AuthenticationModel.swift */; };
+		25206CB827127D9500CA94B5 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CB727127D9500CA94B5 /* AuthenticationTests.swift */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -338,6 +341,9 @@
 		25206CAC270BDEFA00CA94B5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		25206CAF270BE18E00CA94B5 /* RoundedCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCustomTextField.swift; sourceTree = "<group>"; };
 		25206CB1270D194F00CA94B5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		25206CB3270E75A000CA94B5 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		25206CB5270E763E00CA94B5 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		25206CB727127D9500CA94B5 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -1082,6 +1088,7 @@
 				25F1423826CB45E7004B7738 /* Model.swift */,
 				25F1423926CB45E7004B7738 /* AccountModel.swift */,
 				25F1423A26CB45E7004B7738 /* AddAccountModel.swift */,
+				25206CB5270E763E00CA94B5 /* AuthenticationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1090,6 +1097,7 @@
 			isa = PBXGroup;
 			children = (
 				25F1423C26CB45E7004B7738 /* AddAccount.swift */,
+				25206CB3270E75A000CA94B5 /* Authentication.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1115,6 +1123,7 @@
 			isa = PBXGroup;
 			children = (
 				25F1424826CB4632004B7738 /* RemoteAddAcountTests.swift */,
+				25206CB727127D9500CA94B5 /* AuthenticationTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1783,6 +1792,8 @@
 				25F1424026CB45E7004B7738 /* AddAccount.swift in Sources */,
 				25F1423E26CB45E7004B7738 /* AccountModel.swift in Sources */,
 				25F1423F26CB45E7004B7738 /* AddAccountModel.swift in Sources */,
+				25206CB6270E763E00CA94B5 /* AuthenticationModel.swift in Sources */,
+				25206CB4270E75A000CA94B5 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1802,6 +1813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2551F94626D87C0800F72A14 /* TestFactories.swift in Sources */,
+				25206CB827127D9500CA94B5 /* AuthenticationTests.swift in Sources */,
 				2551F94926D87C7100F72A14 /* HttpClientSpy.swift in Sources */,
 				2551F94D26D87CD700F72A14 /* AccountModelFactories.swift in Sources */,
 				25F1424926CB4632004B7738 /* RemoteAddAcountTests.swift in Sources */,
