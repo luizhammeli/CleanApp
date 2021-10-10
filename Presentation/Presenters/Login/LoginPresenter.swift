@@ -36,10 +36,17 @@ public final class LoginPresenter {
                 self.loadingView.display(viewModel: .init(isLoading: false))
                 
                 switch result {
+                case .success:
+                    self.alertView.showMessage(viewModel: .init(title: "Login", message: "Login efetuado com sucesso."))
                 case .failure(let error):
-                    self.alertView.showMessage(viewModel: .init(title: "Erro", message: "Ocorreu um erro ao realizar o login, tente novamente."))
-                default:
-                    break
+                    let errorMessage: String
+                    switch error {
+                    case .expiredSession:
+                        errorMessage = "Email e/ou senha incorretos."
+                    default:
+                        errorMessage = "Ocorreu um erro ao realizar o login, tente novamente."
+                    }
+                    self.alertView.showMessage(viewModel: .init(title: "Erro", message: errorMessage))
                 }
             }
         }

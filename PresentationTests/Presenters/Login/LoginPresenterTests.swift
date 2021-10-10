@@ -59,7 +59,7 @@ final class LoginPresenterTests: XCTestCase {
         wait(for: [expectation2], timeout: 1)
     }
     
-    func test_should_show_generic_error_message_if_addAccount_fails() throws {
+    func test_should_show_generic_error_message_if_authentication_fails() throws {
         let alertView = AlertViewSpy()
         let authentication = AuthenticationSpy()
         let sut = makeSut(alertView: alertView, authentication: authentication)
@@ -72,6 +72,35 @@ final class LoginPresenterTests: XCTestCase {
         authentication.completeWithError(error: .unexpected)
         wait(for: [expectation], timeout: 1)
     }
+    
+    func test_should_show_incorrect_data_error_error_message_if_authentication_fails_with_expired_session() throws {
+        let alertView = AlertViewSpy()
+        let authentication = AuthenticationSpy()
+        let sut = makeSut(alertView: alertView, authentication: authentication)
+        let expectation = expectation(description: "waiting")
+        alertView.observe { viewModel in
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Email e/ou senha incorretos."))
+            expectation.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authentication.completeWithError(error: .expiredSession)
+        wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_should_show_success_message_if_authentication_succeeds() throws {
+        let alertView = AlertViewSpy()
+        let authentication = AuthenticationSpy()
+        let sut = makeSut(alertView: alertView, authentication: authentication)
+        let expectation = expectation(description: "waiting")
+        alertView.observe { viewModel in
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Login", message: "Login efetuado com sucesso."))
+            expectation.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authentication.completeWithSucess()
+        wait(for: [expectation], timeout: 1)
+    }
+    
 }
 
 extension LoginPresenterTests {

@@ -27,7 +27,7 @@ final class RemoteAuthentication: Authentication {
             case .failure(let error):
                 switch error {
                 case .unauthorized:
-                    completion(.failure(.passwordIncorrect))
+                    completion(.failure(.expiredSession))
                 default:
                     completion(.failure(.unexpected))
                 }

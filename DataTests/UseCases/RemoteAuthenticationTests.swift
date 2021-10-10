@@ -33,7 +33,7 @@ final class RemoteAuthenticationTests: XCTestCase {
     
     func test_add_should_complete_with_password_incorrect_error_if_client_completes_with_unauthorized_error() throws {
         let (sut, postClient) = makeSut()
-        expect(sut: sut, with: .failure(.passwordIncorrect)) {
+        expect(sut: sut, with: .failure(.expiredSession)) {
             postClient.completeWithError(error: .unauthorized)
         }
     }
