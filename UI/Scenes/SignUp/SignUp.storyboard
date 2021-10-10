@@ -127,6 +127,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="plm-Xy-zOn" id="iDr-D7-WgF"/>
+                        <outlet property="loadingIndicator" destination="G3p-kj-1gu" id="N3x-VG-82p"/>
                         <outlet property="nameTextField" destination="B9P-KT-RH2" id="WP1-pG-fgF"/>
                         <outlet property="passwordConfirmationTextField" destination="vaI-a9-JwT" id="Q6u-sd-hKI"/>
                         <outlet property="passwordTextField" destination="srw-l6-CM4" id="aYw-XX-riW"/>

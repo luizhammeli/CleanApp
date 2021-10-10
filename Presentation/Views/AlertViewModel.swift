@@ -17,6 +17,6 @@ public struct AlertViewModel: Equatable {
     }
 }
 
-public protocol AlertView {
+public protocol AlertView: AnyObject {
     func showMessage(viewModel: AlertViewModel)
 }
