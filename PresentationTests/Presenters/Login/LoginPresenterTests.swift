@@ -58,6 +58,20 @@ final class LoginPresenterTests: XCTestCase {
         authenticationSpy.completeWithError(error: .unexpected)
         wait(for: [expectation2], timeout: 1)
     }
+    
+    func test_should_show_generic_error_message_if_addAccount_fails() throws {
+        let alertView = AlertViewSpy()
+        let authentication = AuthenticationSpy()
+        let sut = makeSut(alertView: alertView, authentication: authentication)
+        let expectation = expectation(description: "waiting")
+        alertView.observe { viewModel in
+            XCTAssertEqual(viewModel, makeGenericLoginErrorAlertViewModel())
+            expectation.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authentication.completeWithError(error: .unexpected)
+        wait(for: [expectation], timeout: 1)
+    }
 }
 
 extension LoginPresenterTests {

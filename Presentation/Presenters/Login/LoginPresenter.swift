@@ -34,6 +34,13 @@ public final class LoginPresenter {
             authentication.auth(authenticationModel: authenticationModel) { [weak self] result in
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: .init(isLoading: false))
+                
+                switch result {
+                case .failure(let error):
+                    self.alertView.showMessage(viewModel: .init(title: "Erro", message: "Ocorreu um erro ao realizar o login, tente novamente."))
+                default:
+                    break
+                }
             }
         }
     }

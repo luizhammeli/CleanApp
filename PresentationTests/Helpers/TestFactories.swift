@@ -23,6 +23,11 @@ func makeSignupErrorAlertViewModel() -> AlertViewModel {
     return AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o cadastro, tente novamente.")
 }
 
+func makeGenericLoginErrorAlertViewModel() -> AlertViewModel {
+    return AlertViewModel(title: "Erro", message: "Ocorreu um erro ao realizar o login, tente novamente.")
+}
+
+
 func makeSignupSuccessAlertViewModel(message: String) -> AlertViewModel {
     return AlertViewModel(title: "Sucesso", message: message)
 }
