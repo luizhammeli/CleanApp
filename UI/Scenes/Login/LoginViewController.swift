@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Presentation
 
 public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
@@ -31,4 +32,25 @@ public final class LoginViewController: UIViewController, Storyboarded {
     }
     
     @objc private func didTapSubmitButton() {}
+}
+
+extension LoginViewController: LoadingView {
+    public func display(viewModel: LoadingViewModel) {
+        if viewModel.isLoading {
+            self.submitButton.isEnabled = false
+            self.loadingIndicator.startAnimating()
+        } else {
+            self.submitButton.isEnabled = true
+            self.loadingIndicator.stopAnimating()
+        }
+    }
+}
+
+extension LoginViewController: AlertView {
+    public func showMessage(viewModel: AlertViewModel) {
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
 }
