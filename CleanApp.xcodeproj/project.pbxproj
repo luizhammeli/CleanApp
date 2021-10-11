@@ -22,6 +22,7 @@
 		25206CC327135B3400CA94B5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CC227135B3400CA94B5 /* LoginViewModel.swift */; };
 		25206CC52713649E00CA94B5 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CC42713649E00CA94B5 /* AuthenticationSpy.swift */; };
 		25206CC827138AB400CA94B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CC727138AB400CA94B5 /* LoginViewController.swift */; };
+		25206CCF2714D2B500CA94B5 /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CCE2714D2B500CA94B5 /* LoginControllerTests.swift */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -101,6 +102,7 @@
 		25ADFF492708CB3800024D16 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADFF482708CB3800024D16 /* EmailValidation.swift */; };
 		25ADFF4B2708D47700024D16 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADFF4A2708D47700024D16 /* ValidationComposite.swift */; };
 		25ADFF4D2708D4A500024D16 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADFF4C2708D4A500024D16 /* ValidationSpy.swift */; };
+		25B52EB42714D6AA00C79854 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B52EB32714D6AA00C79854 /* Login.storyboard */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25E662D226F7F34400AD07F9 /* AddAcountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8E926ED37510038D4A8 /* AddAcountSpy.swift */; };
@@ -363,7 +365,7 @@
 		25206CC227135B3400CA94B5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		25206CC42713649E00CA94B5 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		25206CC727138AB400CA94B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		25206CCC27138D4E00CA94B5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		25206CCE2714D2B500CA94B5 /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 		25ADFF482708CB3800024D16 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		25ADFF4A2708D47700024D16 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		25ADFF4C2708D4A500024D16 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
+		25B52EB32714D6AA00C79854 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		25E662D626F8115F00AD07F9 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		25E662D926F8165000AD07F9 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		25E662DA26F816A000AD07F9 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -624,7 +627,15 @@
 			isa = PBXGroup;
 			children = (
 				25206CC727138AB400CA94B5 /* LoginViewController.swift */,
-				25206CCC27138D4E00CA94B5 /* Login.storyboard */,
+				25B52EB32714D6AA00C79854 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		25206CCD2714D29E00CA94B5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				25206CCE2714D2B500CA94B5 /* LoginControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -753,6 +764,7 @@
 		2585C82626EEB04D0070B1ED /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				25206CCD2714D29E00CA94B5 /* Login */,
 				2585C82126EEAFCB0070B1ED /* Signup */,
 			);
 			path = Scene;
@@ -1622,6 +1634,7 @@
 			files = (
 				2586A91A26EE38050038D4A8 /* SignUp.storyboard in Resources */,
 				25206CA9270BCE1500CA94B5 /* images.xcassets in Resources */,
+				25B52EB42714D6AA00C79854 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1750,6 +1763,7 @@
 			files = (
 				2586A90326EE306F0038D4A8 /* SignupViewControllerTests.swift in Sources */,
 				2585C82526EEAFF50070B1ED /* TestExtensions.swift in Sources */,
+				25206CCF2714D2B500CA94B5 /* LoginControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
