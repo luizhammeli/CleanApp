@@ -46,7 +46,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iaf-9k-GiM">
                                         <rect key="frame" x="0.0" y="234" width="320" height="270"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-nh-tsX" customClass="RoundedCustomTextField" customModule="UI" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-nh-tsX" customClass="RoundedCustomTextField" customModule="UI" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="NDy-zp-Ilv"/>
@@ -110,7 +110,9 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="emailTextField" destination="JDW-nh-tsX" id="Duq-yB-JcP"/>
                         <outlet property="loadingIndicator" destination="ScD-1r-dGg" id="gSL-h3-CAg"/>
+                        <outlet property="passwordTextField" destination="QWK-Cd-AbK" id="Ldp-qS-95t"/>
                         <outlet property="stackView" destination="iaf-9k-GiM" id="MSq-nN-LJd"/>
                         <outlet property="submitButton" destination="c47-BG-jjE" id="QIn-3p-Vzm"/>
                     </connections>

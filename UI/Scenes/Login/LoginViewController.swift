@@ -9,9 +9,13 @@ import UIKit
 import Presentation
 
 public final class LoginViewController: UIViewController, Storyboarded {
-    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    
+    var login: ((LoginViewModel) -> Void)?
     
     public override func viewDidLoad () {
         super.viewDidLoad()
@@ -31,7 +35,9 @@ public final class LoginViewController: UIViewController, Storyboarded {
         stackView.layoutMargins = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     }
     
-    @objc private func didTapSubmitButton() {}
+    @objc private func didTapSubmitButton() {
+        self.login?(.init(email: emailTextField.text, password: passwordTextField.text))
+    }
 }
 
 extension LoginViewController: LoadingView {

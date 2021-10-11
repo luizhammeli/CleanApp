@@ -42,7 +42,7 @@
 		257E08CF26DC35180030B859 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94526D87C0800F72A14 /* TestFactories.swift */; };
 		257E08D026DC351F0030B859 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
 		257E08D326DC37EB0030B859 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 257E08D226DC37EB0030B859 /* Alamofire */; };
-		2585C82526EEAFF50070B1ED /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82426EEAFF50070B1ED /* TestExtensions.swift */; };
+		2585C82526EEAFF50070B1ED /* UIControlTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82426EEAFF50070B1ED /* UIControlTestExtensions.swift */; };
 		2585C82926F5F25D0070B1ED /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */; };
 		2585C82B26F5FA8E0070B1ED /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */; };
 		2585C82D26F5FAD80070B1ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585C82C26F5FAD80070B1ED /* Storyboarded.swift */; };
@@ -103,6 +103,7 @@
 		25ADFF4B2708D47700024D16 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADFF4A2708D47700024D16 /* ValidationComposite.swift */; };
 		25ADFF4D2708D4A500024D16 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADFF4C2708D4A500024D16 /* ValidationSpy.swift */; };
 		25B52EB42714D6AA00C79854 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B52EB32714D6AA00C79854 /* Login.storyboard */; };
+		25B52EB52714DEE700C79854 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
 		25BFAE0A26D881CD001EB57E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; };
 		25BFAE0B26D881CD001EB57E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1420D26CB45B6004B7738 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25E662D226F7F34400AD07F9 /* AddAcountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8E926ED37510038D4A8 /* AddAcountSpy.swift */; };
@@ -382,7 +383,7 @@
 		257E08BB26DC34E70030B859 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		257E08C026DC34E70030B859 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		257E08C226DC34E70030B859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2585C82426EEAFF50070B1ED /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		2585C82426EEAFF50070B1ED /* UIControlTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlTestExtensions.swift; sourceTree = "<group>"; };
 		2585C82826F5F25D0070B1ED /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2585C82A26F5FA8E0070B1ED /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		2585C82C26F5FAD80070B1ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -756,7 +757,7 @@
 		2585C82226EEAFE20070B1ED /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2585C82426EEAFF50070B1ED /* TestExtensions.swift */,
+				2585C82426EEAFF50070B1ED /* UIControlTestExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1762,8 +1763,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2586A90326EE306F0038D4A8 /* SignupViewControllerTests.swift in Sources */,
-				2585C82526EEAFF50070B1ED /* TestExtensions.swift in Sources */,
+				2585C82526EEAFF50070B1ED /* UIControlTestExtensions.swift in Sources */,
 				25206CCF2714D2B500CA94B5 /* LoginControllerTests.swift in Sources */,
+				25B52EB52714DEE700C79854 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
