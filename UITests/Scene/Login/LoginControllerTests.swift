@@ -9,7 +9,7 @@ import XCTest
 import Presentation
 @testable import UI
 
-class LoginControllerTests: XCTestCase {
+final class LoginControllerTests: XCTestCase {
     func test_loading_is_hidden_on_start() {
         XCTAssertFalse(makeSut().loadingIndicator.isAnimating)
     }
