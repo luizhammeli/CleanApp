@@ -16,12 +16,12 @@ final class LoginControllerFactoryTests: XCTestCase {
         let (sut, authenticationSpy) = makeSut()
         sut.loadViewIfNeeded()
         sut.login?(makeLoginViewModel())
-        //let exp = expectation(description: "waiting")
-//        DispatchQueue.global().async {
-//            authenticationSpy.completeWithError(error: .invalidData)
-//            exp.fulfill()
-//        }
-        //wait(for: [exp], timeout: 0.1)
+        let exp = expectation(description: "waiting")
+        DispatchQueue.global().async {
+            authenticationSpy.completeWithError(error: .invalidData)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 0.1)
     }
     
     func test_compose_with_correct_validation() {
@@ -37,7 +37,7 @@ extension LoginControllerFactoryTests {
         let authenticationSpy = AuthenticationSpy()
         let sut = makeLoginController(with: MainQueueDispatchDecorator(instance: authenticationSpy))
         checkMemoryLeak(for: sut, file: file, line: line)
-        checkMemoryLeak(for: authenticationSpy, file: file, line: line)
+//        checkMemoryLeak(for: authenticationSpy, file: file, line: line)
 
         return (sut, authenticationSpy)
     }

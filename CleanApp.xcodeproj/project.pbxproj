@@ -23,6 +23,7 @@
 		25206CC52713649E00CA94B5 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CC42713649E00CA94B5 /* AuthenticationSpy.swift */; };
 		25206CC827138AB400CA94B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CC727138AB400CA94B5 /* LoginViewController.swift */; };
 		25206CCF2714D2B500CA94B5 /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25206CCE2714D2B500CA94B5 /* LoginControllerTests.swift */; };
+		2530AAB12715E2A200A44DEF /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2530AAB02715E2A200A44DEF /* Welcome.storyboard */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -371,6 +372,7 @@
 		25206CC42713649E00CA94B5 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		25206CC727138AB400CA94B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25206CCE2714D2B500CA94B5 /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
+		2530AAB02715E2A200A44DEF /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -648,6 +650,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		2530AAAD2715E27C00A44DEF /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2530AAB02715E2A200A44DEF /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		254F70DB26D130CF00BD6F51 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +750,7 @@
 		2585C81F26EEAF840070B1ED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2530AAAD2715E27C00A44DEF /* Welcome */,
 				25206CC627138AA700CA94B5 /* Login */,
 				2585C82026EEAF870070B1ED /* SignUp */,
 			);
@@ -1644,6 +1655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2586A91A26EE38050038D4A8 /* SignUp.storyboard in Resources */,
+				2530AAB12715E2A200A44DEF /* Welcome.storyboard in Resources */,
 				25206CA9270BCE1500CA94B5 /* images.xcassets in Resources */,
 				25B52EB42714D6AA00C79854 /* Login.storyboard in Resources */,
 			);
