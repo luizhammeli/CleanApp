@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = CustomNavigationController(rootViewController: makeSignupController())
+        window?.rootViewController = CustomNavigationController(rootViewController: makeLoginController())
         window?.makeKeyAndVisible()
     }
 }

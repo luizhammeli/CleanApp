@@ -30,7 +30,6 @@ public final class LoginPresenter {
             }
             
             loadingView.display(viewModel: .init(isLoading: true))
-            
             authentication.auth(authenticationModel: authenticationModel) { [weak self] result in
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: .init(isLoading: false))

@@ -52,7 +52,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="NDy-zp-Ilv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWK-Cd-AbK" customClass="RoundedCustomTextField" customModule="UI" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="60" width="320" height="44"/>

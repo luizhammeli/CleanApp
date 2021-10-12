@@ -30,3 +30,13 @@ extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
         }
     }
 }
+
+extension MainQueueDispatchDecorator: Authentication where T: Authentication {
+    func auth(authenticationModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void) {
+        self.instance.auth(authenticationModel: authenticationModel) { result in
+            self.dispatch {
+                completion(result)
+            }
+        }
+    }
+}

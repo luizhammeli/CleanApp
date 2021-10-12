@@ -105,12 +105,13 @@ final class LoginPresenterTests: XCTestCase {
 extension LoginPresenterTests {
     private func makeSut(alertView: AlertViewSpy = AlertViewSpy(),
                          loadingView: LoadingView = LoadingViewSpy(),
-                         authentication: Authentication = AuthenticationSpy(),
+                         authentication: AuthenticationSpy = AuthenticationSpy(),
                          validation: Validation = ValidationSpy(),
                          file: StaticString = #filePath,
                          line: UInt = #line) -> LoginPresenter {
         let sut = LoginPresenter(validation: validation, alertView: alertView, loadingView: loadingView, authentication: authentication)
         checkMemoryLeak(for: sut, file: file, line: line)
+        checkMemoryLeak(for: authentication, file: file, line: line)
         return sut
     }
 }

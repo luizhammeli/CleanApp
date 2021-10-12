@@ -15,7 +15,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     
-    var login: ((LoginViewModel) -> Void)?
+    public var login: ((LoginViewModel) -> Void)?
     
     public override func viewDidLoad () {
         super.viewDidLoad()

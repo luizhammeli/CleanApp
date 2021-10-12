@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-final class RemoteAuthentication: Authentication {
+public final class RemoteAuthentication: Authentication {
     private let url: URL
     private let postClient: HttpPostClient
     
@@ -17,7 +17,7 @@ final class RemoteAuthentication: Authentication {
         self.postClient = postClient
     }
     
-    func auth(authenticationModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void) {
+    public func auth(authenticationModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void) {
         postClient.post(to: url, with: authenticationModel.toData()) { [weak self] result in
             guard self != nil else { return }            
             switch result {
