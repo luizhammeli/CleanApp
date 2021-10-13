@@ -11,8 +11,8 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
-    var login: (() -> Void)?
-    var signup: (() -> Void)?
+    public var login: (() -> Void)?
+    public var signup: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,8 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
+        navigationItem.title = "4Devs"
+        
         signupButton.addTarget(self, action: #selector(didTapSignupButton), for: .touchUpInside)
         signupButton.layer.cornerRadius = 8
         
