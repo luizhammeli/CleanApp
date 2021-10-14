@@ -11,6 +11,10 @@ import Validation
 import Data
 import Domain
 
+func makeSignupController() -> SignUpViewController {
+    return makeSignupController(with: makeRemoteAddAccount())
+}
+
 func makeSignupController(with addAccount: AddAccount = makeRemoteAddAccount()) -> SignUpViewController {
     guard let controller = SignUpViewController.instantiate() else { fatalError("SignUpViewController should be not nil") }
     let validationComposite = ValidationComposite(validations: makeValidations())
