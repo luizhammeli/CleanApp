@@ -13,7 +13,7 @@ import Domain
 import Validation
 
 func makeLoginController() -> LoginViewController {
-    return makeLoginController(with:  makeRemoteAuthentication())
+    return makeLoginController(with: makeRemoteAuthentication())
 }
 
 func makeLoginController(with authentication: Authentication = makeRemoteAuthentication()) -> LoginViewController {
