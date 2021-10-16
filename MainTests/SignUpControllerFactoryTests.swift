@@ -30,9 +30,9 @@ final class SignUpControllerFactoryTests: XCTestCase {
         XCTAssertEqual(validations[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", validator: EmailValidatorSpy()))
         XCTAssertEqual(validations[3] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"))
         XCTAssertEqual(validations[4] as! RequiredFieldsValidation, RequiredFieldsValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha"))
-        XCTAssertEqual(validations[5] as! CompareFieldValidation, CompareFieldValidation(fieldName: "password",
-                                                                                         fieldToCompare: "passwordConfirmation",
-                                                                                         fieldLabel: "Senha"))
+        XCTAssertEqual(validations[5] as! CompareFieldValidation, CompareFieldValidation(fieldName: "passwordConfirmation",
+                                                                                         fieldToCompare: "password",
+                                                                                         fieldLabel: "Confirmar Senha"))
     }
 }
 

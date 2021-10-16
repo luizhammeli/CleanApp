@@ -28,6 +28,7 @@
 		2530AAB627162E7200A44DEF /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530AAB527162E7200A44DEF /* WelcomeViewControllerTests.swift */; };
 		2530AAB82716588300A44DEF /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530AAB72716588300A44DEF /* WelcomeRouterTests.swift */; };
 		2530AABA27165D5A00A44DEF /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530AAB927165D5A00A44DEF /* WelcomeRouter.swift */; };
+		2530AABD271AE52900A44DEF /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530AABC271AE52900A44DEF /* ValidationBuilder.swift */; };
 		254F70DD26D130E000BD6F51 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DC26D130E000BD6F51 /* DomainError.swift */; };
 		254F70DF26D1318300BD6F51 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F70DE26D1318300BD6F51 /* HttpError.swift */; };
 		2551F94426D87BBC00F72A14 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551F94326D87BBC00F72A14 /* TestExtensions.swift */; };
@@ -381,6 +382,7 @@
 		2530AAB527162E7200A44DEF /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		2530AAB72716588300A44DEF /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		2530AAB927165D5A00A44DEF /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		2530AABC271AE52900A44DEF /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		254F70DC26D130E000BD6F51 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		254F70DE26D1318300BD6F51 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		2551F94326D87BBC00F72A14 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
@@ -677,6 +679,14 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		2530AABB271AE51900A44DEF /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				2530AABC271AE52900A44DEF /* ValidationBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		254F70DB26D130CF00BD6F51 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,6 +980,7 @@
 		25ACDD9826F769580069EB75 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2530AABB271AE51900A44DEF /* Builders */,
 				2553EE9427013B8F007F4CD0 /* Decorators */,
 				25E662D826F8163F00AD07F9 /* Env */,
 				25E662D526F8115100AD07F9 /* Proxies */,
@@ -1885,6 +1896,7 @@
 				25753EE6270B5E2000FB6914 /* RemoteAddAccountFactory.swift in Sources */,
 				25E662D726F8115F00AD07F9 /* WeakVarProxy.swift in Sources */,
 				25B52EBF2715239300C79854 /* LoginControllerFactory.swift in Sources */,
+				2530AABD271AE52900A44DEF /* ValidationBuilder.swift in Sources */,
 				25753EEE270B5F7A00FB6914 /* EmailValidatorAdapterFactory.swift in Sources */,
 				25B52EBD2715221A00C79854 /* RemoteAuthenticationFactory.swift in Sources */,
 				25ACDD9C26F769590069EB75 /* SceneDelegate.swift in Sources */,

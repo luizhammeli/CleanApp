@@ -21,8 +21,5 @@ func makeLoginController(with authentication: Authentication = makeRemoteAuthent
 }
 
 func makeLoginValidations(emailValidator: EmailValidator = makeEmailValidatorAdapter()) -> [Validation] {
-    return [RequiredFieldsValidation(fieldName: "email", fieldLabel: "Email"),
-            EmailValidation(fieldName: "email", fieldLabel: "Email", validator: emailValidator),
-            RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"),
-    ]
+    return ValidationBuilder.field("email").label("Email").required().email(emailValidator: emailValidator).get() + ValidationBuilder.field("password").label("Senha").required().get()
 }

@@ -23,11 +23,8 @@ func makeSignupController(with addAccount: AddAccount = makeRemoteAddAccount()) 
 }
 
 func makeValidations(emailValidator: EmailValidator = makeEmailValidatorAdapter()) -> [Validation] {
-    return [RequiredFieldsValidation(fieldName: "name", fieldLabel: "Nome"),
-            RequiredFieldsValidation(fieldName: "email", fieldLabel: "Email"),
-            EmailValidation(fieldName: "email", fieldLabel: "Email", validator: emailValidator),
-            RequiredFieldsValidation(fieldName: "password", fieldLabel: "Senha"),
-            RequiredFieldsValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha"),
-            CompareFieldValidation(fieldName: "password", fieldToCompare: "passwordConfirmation", fieldLabel: "Senha")
-    ]
+    return ValidationBuilder.field("name").label("Nome").required().get() +
+    ValidationBuilder.field("email").label("Email").required().email(emailValidator: emailValidator).get() +
+    ValidationBuilder.field("password").label("Senha").required().get() +
+    ValidationBuilder.field("passwordConfirmation").label("Confirmar Senha").required().sameAs("password").get()
 }
