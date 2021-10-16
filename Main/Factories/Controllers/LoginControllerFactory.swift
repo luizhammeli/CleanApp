@@ -12,6 +12,10 @@ import Presentation
 import Domain
 import Validation
 
+func makeLoginController() -> LoginViewController {
+    return makeLoginController(with: makeRemoteAuthentication())
+}
+
 func makeLoginController(with authentication: Authentication = makeRemoteAuthentication()) -> LoginViewController {
     guard let controller = LoginViewController.instantiate() else { fatalError("LoginViewController should be not nil") }
     let validationComposite = ValidationComposite(validations: makeLoginValidations())
