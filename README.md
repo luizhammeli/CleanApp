@@ -7,12 +7,12 @@ In order to make easy reason about it the project was organised into six modules
 
 **Structure(Modules):**
 
-Domain;
-Data;
-Infrastructure;
-Presentation;
-Validation;
-Main;
+- Domain
+- Data
+- Infrastructure
+- Presentation
+- Validation
+- Main
 
 ## Getting Starte
 Build and run the Main module to execute the app in the simulator.
@@ -20,3 +20,4 @@ Build and run the Main module to execute the app in the simulator.
 ## Improvements:
 
 - Add a some feed or list feature to improve the exemples.
+- Improve de UI, replace the storyboard with view code
