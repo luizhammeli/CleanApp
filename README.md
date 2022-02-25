@@ -14,7 +14,7 @@ In order to make easy reason about it the project was organised into six modules
 - Validation
 - Main
 
-## Getting Starte
+## Getting Started
 Build and run the Main module to execute the app in the simulator.
 
 ## Improvements:
