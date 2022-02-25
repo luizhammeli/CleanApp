@@ -1,4 +1,7 @@
 # CleanApp
+
+![](https://github.com/luizhammeli/CleanApp/workflows/CI/badge.svg)
+
 CleanApp its a very simple study project using Clean Architecture concepts. Currently the project contains just two features Login and Signup.
 
 Project structure
