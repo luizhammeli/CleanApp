@@ -29,7 +29,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
         hideKeyboardOnTap()
         configureStackView()
         saveButton.layer.cornerRadius = 8
-        navigationItem.title = "4Devs"
+        navigationItem.title = "CleanApp"
     }
     
     @objc private func didTapSaveButton() {
