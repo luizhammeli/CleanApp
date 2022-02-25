@@ -1,11 +1,11 @@
 # CleanApp
-CleanApp its a simple study project using Clean Architecture concepts. Currently the project constains just two feature Login and Signup.
+CleanApp its a very simple study project using Clean Architecture concepts. Currently the project contains just two feature Login and Signup.
 
 Project structure
 
 In order to make easy reason about it the project was organised into six modules:
 
-**Structure(Modules):**
+**Structure (Modules):**
 
 - Domain
 - Data
