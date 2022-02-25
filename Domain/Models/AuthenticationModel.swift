@@ -15,5 +15,4 @@ public struct AuthenticationModel: Model {
         self.email = email
         self.password = password        
     }
-    
 }
