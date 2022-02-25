@@ -1,5 +1,5 @@
 # CleanApp
-CleanApp its a very simple study project using Clean Architecture concepts. Currently the project contains just two feature Login and Signup.
+CleanApp its a very simple study project using Clean Architecture concepts. Currently the project contains just two features Login and Signup.
 
 Project structure
 
