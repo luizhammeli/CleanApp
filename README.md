@@ -5,7 +5,7 @@ Project structure
 
 In order to make easy reason about it the project was organised into six modules:
 
-**Structure:**
+**Structure(Modules):**
 
 Domain
 Data
@@ -14,7 +14,7 @@ Presentation
 Validation
 Main
 
-## Getting Started )
+## Getting Starte
 Build and run the Main module to execute the app in the simulator.
 
 ## Improvements:
