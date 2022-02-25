@@ -21,3 +21,4 @@ Build and run the Main module to execute the app in the simulator.
 
 - Add a some feed or list feature to improve the exemples.
 - Improve de UI, replace the storyboard with view code
+- CI Improvements
