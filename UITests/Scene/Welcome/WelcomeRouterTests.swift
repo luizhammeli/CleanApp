@@ -8,26 +8,6 @@
 import XCTest
 import UI
 
-final class WelcomeRouter {
-    private let navigationController: CustomNavigationController
-    private let loginFactory: () -> LoginViewController
-    private let signupFactory: () -> SignUpViewController
-    
-    init(navigationController: CustomNavigationController, loginFactory: @escaping () -> LoginViewController, signupFactory: @escaping () -> SignUpViewController) {
-        self.navigationController = navigationController
-        self.loginFactory = loginFactory
-        self.signupFactory = signupFactory
-    }
-    
-    func goToLogin() {
-        navigationController.pushViewController(loginFactory())
-    }
-    
-    func goToSignup() {
-        navigationController.pushViewController(signupFactory())
-    }
-}
-
 final class WelcomeRouterTests: XCTestCase {
     func test_goToLogin_should_calls_navigation_controller_with_login_controller() {
         let (sut, navController) = makeSut()
