@@ -20,7 +20,7 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
-        navigationItem.title = "4Devs"
+        navigationItem.title = "CleanApp"
         
         signupButton.addTarget(self, action: #selector(didTapSignupButton), for: .touchUpInside)
         signupButton.layer.cornerRadius = 8

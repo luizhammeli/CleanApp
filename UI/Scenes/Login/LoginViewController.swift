@@ -23,7 +23,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
-        navigationItem.title = "4Devs"
+        navigationItem.title = "CleanApp"
         submitButton.addTarget(self, action: #selector(didTapSubmitButton), for: .touchUpInside)
         submitButton.layer.cornerRadius = 8
         hideKeyboardOnTap()

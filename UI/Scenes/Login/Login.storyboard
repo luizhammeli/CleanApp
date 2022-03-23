@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,11 +63,11 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPX-bI-RW0">
-                                                <rect key="frame" x="0.0" y="120" width="320" height="31"/>
+                                                <rect key="frame" x="0.0" y="120" width="320" height="84"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c47-BG-jjE">
-                                                <rect key="frame" x="0.0" y="167" width="320" height="50"/>
+                                                <rect key="frame" x="0.0" y="220" width="320" height="50"/>
                                                 <color key="backgroundColor" red="0.53333333329999999" green="0.054901960780000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="551-r4-gYn"/>
@@ -89,19 +89,21 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-1r-dGg">
-                                                <rect key="frame" x="0.0" y="233" width="320" height="37"/>
-                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-1r-dGg">
+                                <rect key="frame" x="150" y="513" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ScD-1r-dGg" firstAttribute="centerY" secondItem="c47-BG-jjE" secondAttribute="centerY" id="O4J-Yf-jsE"/>
+                            <constraint firstItem="ScD-1r-dGg" firstAttribute="centerX" secondItem="c47-BG-jjE" secondAttribute="centerX" id="iFe-35-hBS"/>
                             <constraint firstItem="1as-wn-Bwh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="j3N-Yx-DFh"/>
                             <constraint firstItem="1as-wn-Bwh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jgk-hr-oKR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1as-wn-Bwh" secondAttribute="trailing" id="q2J-8v-C19"/>
